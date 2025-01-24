@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(10deg,
+            var(--color-dark-cyan) 0%,
+            var(--color-strong-cyan) 80%,
+            var(--color-strong-cyan)100%);
+}
+
+:root {
+    /*palette principale*/
+    --color-very-dark-blue: #051f34;
+    --color-dark-cyan: #027495;
+    --color-strong-cyan: #01a9c1;
+    --color-light-grayish-cyan: #bad6db;
+    --color-very-light-grayish-cyan: #f4f5f5;
+
+    /*palette secondaire*/
+    --color-very-dark-cyan: #164f55;
+    --color-slightly-desaturated-cyan: #7fb9c2;
+    --color-light-grayish-cyan-lime-green: #e7f0ed;
+    --color-dark-grayish-cyan: #95acb2;
+    --color-mostly-desaturated-dark-blue: #628ca6 ;
+}   
+
+header {
+    width: 100%;
+    height: 1000px;
+    /* A CHANGER*/
+    position: relative;
+    
+}
+
+.animation-bulles-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+}
+
+
+main {
+    position: relative;
+    width: 100%;
+    height: 400px;
+
+}
+
+footer {
+    width: 100%;
+    height: 600px;
+}

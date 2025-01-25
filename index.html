@@ -12,13 +12,30 @@
         content="portfolio, développeur, web, frontend, backend, design, javascript, c, python, étudiant">
     <meta name="robots" content="index, follow">
 
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Portfolio Loïc">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" href="assets/Img/icon.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/Img/icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/Img/icon.svg">
+
+    <!-- iOS Splash Screens -->
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px)"
+        href="assets/Img/icon.svg">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px)"
+        href="assets/Img/icon.svg">
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Portefolio">
     <meta property="og:description"
         content="Loïc Sainton, développeur. Découvrez mes projets, mon parcours et plus encore.">
     <meta property="og:image" content="./assets/Img/icon.svg">
     <meta property="og:type" content="website">
-
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -27,21 +44,29 @@
         content="Loïc Sainton, développeur. Découvrez mes projets, mon parcours et plus encore.">
     <meta name="twitter:image" content="./assets/Img/icon.svg">
 
-
     <title>Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="assets/Img/icon.svg">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/Css/style.css">
+    <link rel="stylesheet" href="./assets/Css/pop-up-welcome.css">
     <link rel="stylesheet" href="./assets/Css/bulles-animation.css">
 
     <link rel="stylesheet" href="./assets/Css/mobile.css">
 </head>
 
 <body>
+    <div id="welcome-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Bienvenue sur mon Portfolio!</h2>
+            <p>Pour une expérience optimale, évitez de zoomer ou de redimensionner la fenêtre pendant votre visite. Si
+                vous modifiez la taille de la fenêtre, je vous recommande de rafraîchir la page pour garantir le bon
+                fonctionnement des animations.</p>
+            <p>Merci de votre visite.</p>
 
-
-
+            <button id="close-popup">Fermer</button>
+        </div>
+    </div>
     <header class="header-container">
         <div class="header-space-for-margin-top"></div>
         <div class="nom-container">
@@ -105,37 +130,60 @@
             <img src="assets/Img/Bulles/bulle_4.svg" alt="bulle" class="bulle-para4 bulle" id="bulle-38"> <!-- 3.7vw -->
         </div>
     </header>
+
     <div class="header-space">
         <div class="start-nom-to-top-animation"></div>
     </div>
 
+
     <main>
-        <div class="coral-container">
-            <img src="assets/Img/scenes/coral_1.png" alt="coral" class="coral-para1">
-        </div>
     </main>
     <footer>
 
     </footer>
     <!-- 1. GSAP Core Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
 
-<!-- 2. ScrollMagic Core -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <!-- 2. ScrollMagic Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 
-<!-- 3. ScrollMagic Plugins -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <!-- 3. ScrollMagic Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
 
-<!-- 4. Custom Animations -->
-<script src="assets/JavaScript/scroll-top-when-page-is-reload.js"></script>
-<script src="assets/JavaScript/bulle-animation.js"></script>
+    <!-- 4. Custom Animations -->
+    <script src="assets/JavaScript/scroll-top-when-page-is-reload.js"></script>
+    <!-- 3. Load popup first -->
+    <script src="assets/JavaScript/pop-up-welcome.js"></script>
+    
+    <!-- 4. Then load animations -->
+    <script>
+        window.isPopupOpen = true; // Global flag
+        
+        function initializeAllAnimations() {
+            // Create script elements
+            const scripts = [
+                'assets/JavaScript/scroll-top-when-page-is-reload.js',
+                'assets/JavaScript/bulle-animation.js',
+                'assets/JavaScript/nom-prenom-to-top.js'
+            ];
+            
+            scripts.forEach(src => {
+                const script = document.createElement('script');
+                script.src = src;
+                document.body.appendChild(script);
+            });
+        }
 
-<!-- 4. Custom Settings -->
-<script src="assets/JavaScript/nom-prenom-to-top.js"></script>
+        // Listen for popup close event
+        document.addEventListener('popupClosed', function() {
+            window.isPopupOpen = false;
+            initializeAllAnimations();
+        });
+    </script>
 </body>
 
 </html>

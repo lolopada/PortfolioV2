@@ -7,6 +7,10 @@ body {
             var(--color-strong-cyan)100%);
 }
 
+body.animations-paused *:not(#welcome-popup, #welcome-popup *) {
+    animation-play-state: paused !important;
+}
+
 @font-face {
     font-family: 'Moon-Regular';
     src: url('../Polices/MOON/Moon2.0-Regular.otf') format('opentype');
@@ -89,9 +93,9 @@ header {
 .animation-bulles-container {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -250px;
     height: 10px;
-    background-color: rgb(205, 251, 0);
+    background-color: rgba(205, 251, 0);
 }
 
 .header-space {
@@ -99,36 +103,24 @@ header {
     height: 800px;
     position: relative;
 }
+
 .start-nom-to-top-animation {
     width: 100%;
     height: 8px;
     background-color: rgb(237, 148, 6);
     position: absolute;
-    bottom:0;
+    bottom:20%;
 }
 
-
 main {
-    background-color: rgba(4, 149, 132, 0.648);
+    background-color: rgba(137, 149, 4, 0.416);
     width: 100%;
     height: 1000px;
 
 }
-.coral-container {
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: red;
-}
-
-.coral-para1 {
-    position: absolute;
-    height: 40vw;
-    right: 7vw;
-}
 
 footer {
-    background-color: rgba(34, 139, 34, 0.732);
+    background-color: rgba(34, 139, 34, 0.384);
     width: 100%;
     height: 600px;
 }

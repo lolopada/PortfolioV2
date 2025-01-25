@@ -243,5 +243,4 @@ const scene1 = new ScrollMagic.Scene({
     reverse: true              // Allow reverse animation
 })
 .setTween(tween2)
-.addIndicators({name: "S movement"})
 .addTo(controller1);

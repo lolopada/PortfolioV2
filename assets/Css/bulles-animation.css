@@ -3,6 +3,22 @@
     position: absolute;
 }
 
+.bulle {
+    z-index: 10;
+    position: absolute;
+    animation: fadeIn 0.7s ease-in;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 #bulle-1 {
     height: 3vw;
     bottom: 120px;
@@ -229,4 +245,121 @@
     height: 3.7vw;
     bottom: -300px;
     left: 93%;
+}
+
+@media screen and (max-width: 800px) {
+    #bulle-1 {
+        height: 6vw;
+    }
+    #bulle-2 {
+        height: 6.7vw;
+    }
+    #bulle-3 {
+        height: 5.1vw;
+    }
+    #bulle-4 {
+        height: 6vw;
+    }
+    #bulle-5 {
+        height: 5vw;
+    }
+    #bulle-6 {
+        height: 7.1vw;
+    }
+    #bulle-7 {
+        height: 5.7vw;
+    }
+    #bulle-8 {
+        height: 5.8vw;
+    }
+    #bulle-9 {
+        height: 7vw;
+    }
+    #bulle-10 {
+        height: 6.2vw;
+    }
+    #bulle-11 {
+        height: 5vw;
+    }
+    #bulle-12 {
+        height: 6.4vw;
+    }
+    #bulle-13 {
+        height: 5.3vw;
+    }
+    #bulle-14 {
+        height: 5.8vw;
+    }
+    #bulle-15 {
+        height: 6.3vw;
+    }
+    #bulle-16 {
+        height: 5.5vw;
+    }
+    #bulle-17 {
+        height: 6.8vw;
+    }
+    #bulle-18 {
+        height: 5.2vw;
+    }
+    #bulle-19 {
+        height: 6.5vw;
+    }
+    #bulle-20 {
+        height: 5.7vw;
+    }
+    #bulle-21 {
+        height: 6.1vw;
+    }
+    #bulle-22 {
+        height: 5.4vw;
+    }
+    #bulle-23 {
+        height: 6.6vw;
+    }
+    #bulle-24 {
+        height: 5.9vw;
+    }
+    #bulle-25 {
+        height: 6.4vw;
+    }
+    #bulle-26 {
+        height: 5.3vw;
+    }
+    #bulle-27 {
+        height: 6.7vw;
+    }
+    #bulle-28 {
+        height: 5.6vw;
+    }
+    #bulle-29 {
+        height: 6.2vw;
+    }
+    #bulle-30 {
+        height: 5.8vw;
+    }
+    #bulle-31 {
+        height: 6.5vw;
+    }
+    #bulle-32 {
+        height: 5.6vw;
+    }
+    #bulle-33 {
+        height: 6.3vw;
+    }
+    #bulle-34 {
+        height: 5.9vw;
+    }
+    #bulle-35 {
+        height: 7.3vw;
+    }
+    #bulle-36 {
+        height: 5.7vw;
+    }
+    #bulle-37 {
+        height: 7vw;
+    }
+    #bulle-38 {
+        height: 6.7vw;
+    }
 }

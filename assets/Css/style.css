@@ -34,44 +34,56 @@ body {
 header {
     width: 100%;
     height: 800px; /* A CHANGER*/
-    margin-top: 200px;
-    position: relative;
+    position: fixed;
     font-family: var(--font-Moon-regular);
+    z-index: 49;
+}
+
+.header-space-for-margin-top {
+    width: 100%;
+    height: 1px;
+    margin-top: 200px;
 }
 
 /*DEBUT NOM PRENOM*/
 .nom-container {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 10vw; /* Add height to contain absolute elements */
 }
 
 .nom-container span {
     color: var(--color-very-dark-blue);
     font-size: 7vw;
-    letter-spacing: 0.15em;
+    position: absolute;
 }
-.O-nom-bulle {height: 7.4vw; margin-top: 1.7vw; margin-right: 0.4vw}
+
+#S-nom { left: calc(50% - 15.1vw); }
+#A-nom { left: calc(50% - 11.5vw); }
+#I-nom { left: calc(50% - 6.75vw); }
+#N-nom { left: calc(50% - 5.8vw); }
+#T-nom { left: calc(50% - 1.4vw); }
+#O-nom { left: calc(50% + 2.785vw); }
+#N-bis-nom { left: calc(50% + 10.55vw); }
+
+.O-nom-bulle {height: 7.4vw; margin-top: 1vw; margin-right: 0.4vw}
 
 .prenom-container {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 10vw; /* Add height to contain absolute elements */
 }
 
 .prenom-container span {
     color: var(--color-very-dark-blue);
     font-size: 7vw;
-    letter-spacing: 0.15em;
+    position: absolute;
 }
-.O-prenom-bulle {height: 7.4vw; margin-top: 1.7vw; margin-right: 0.4vw}
 
-#T-nom, #L-prenom {
-    margin-right: 0;
-    letter-spacing: 0;
-}
+#L-prenom { left: calc(50% - 8.4vw); }
+#O-prenom { left: calc(50% - 4.95vw); }
+#I-prenom { left: calc(50% + 2.75vw); }
+#C-prenom { left: calc(50% + 3.7vw); }
+
+.O-prenom-bulle {height: 7.4vw; margin-top: 0.9vw; margin-right: 0.4vw}
 /*FIN NOM PRENOM*/
 
 .animation-bulles-container {
@@ -79,14 +91,33 @@ header {
     position: absolute;
     bottom: 0;
     height: 10px;
-    background-color: green;
+    background-color: rgb(205, 251, 0);
 }
 
+.header-space {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+.start-nom-to-top-animation {
+    width: 100%;
+    height: 8px;
+    background-color: rgb(237, 148, 6);
+    position: absolute;
+    bottom:0;
+}
+
+
+main {
+    background-color: rgba(4, 149, 132, 0.648);
+    width: 100%;
+    height: 1000px;
+
+}
 .coral-container {
     position: absolute;
-    height: 20px;
+    height: 2px;
     width: 100%;
-    top:50%;
     background-color: red;
 }
 
@@ -96,14 +127,8 @@ header {
     right: 7vw;
 }
 
-main {
-    position: relative;
-    width: 100%;
-    height: 400px;
-
-}
-
 footer {
+    background-color: rgba(34, 139, 34, 0.732);
     width: 100%;
     height: 600px;
 }

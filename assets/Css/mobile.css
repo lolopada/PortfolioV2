@@ -1,20 +1,34 @@
 @media screen and (max-width: 800px) {
 
+    
     /*DEBUT NOM PRENOM*/
+    .nom-container,.prenom-container {
+        height: 15vw;
+    }
+
     .nom-container span {
         color: var(--color-very-dark-blue);
         font-size: 12vw;
-        letter-spacing: 0.15em;
     }
-    .O-nom-bulle {height: 10.4vw; margin-top: 1.7vw; margin-right: 0.4vw}
+    .O-nom-bulle {height: 10.4vw; margin-top: 2.7vw; margin-right: 0.4vw}
 
+    #S-nom { left: calc(50% - 24.4vw); }
+    #A-nom { left: calc(50% - 18.54vw); }
+    #I-nom { left: calc(50% - 10.25vw); }
+    #N-nom { left: calc(50% - 8.7vw); }
+    #T-nom { left: calc(50% - 1vw); }
+    #O-nom { left: calc(50% + 6vw); }
+    #N-bis-nom { left: calc(50% + 16.87vw); }
 
     .prenom-container span {
         color: var(--color-very-dark-blue);
         font-size: 12vw;
-        letter-spacing: 0.15em;
     }
-    .O-prenom-bulle {height: 10.4vw; margin-top: 1.7vw; margin-right: 0.4vw}
+    .O-prenom-bulle {height: 10.4vw; margin-top: 2.7vw; margin-right: 0.4vw}
+    #L-prenom { left: calc(50% - 13.15vw); }
+    #O-prenom { left: calc(50% - 7.45vw); }
+    #I-prenom { left: calc(50% + 3.4vw); }
+    #C-prenom { left: calc(50% + 5vw); }
     /*FIN NOM PRENOM*/
     
 }

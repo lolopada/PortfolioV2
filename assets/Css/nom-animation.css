@@ -1,0 +1,123 @@
+#S-nom {
+    animation: slideS 1.3s ease-out forwards;
+    transform-origin: center;
+}
+
+@keyframes slideS {
+    0% {
+        transform: translateX(-300px) translateY(-60px) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+#A-nom {
+    opacity: 0;
+    animation: slideA 1.3s ease-out forwards;
+    animation-delay: 0.1s;
+    transform-origin: center;
+}
+
+@keyframes slideA {
+    0% {
+        transform: translateX(-200px) translateY(230px) rotate(95deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+#I-nom {
+    opacity: 0;
+    animation: slideI 1.3s ease-out forwards;
+    animation-delay: 0.2s;
+    transform-origin: center;
+}
+
+@keyframes slideI {
+    0% {
+        transform: translateX(-100px) translateY(-180px) rotate(120deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+#N-nom {
+    opacity: 0;
+    animation: slideN 1.3s ease-out forwards;
+    animation-delay: 0.3s;
+    transform-origin: center;
+}
+
+@keyframes slideN {
+    0% {
+        transform: translateX(70px) translateY(200px) rotate(-120deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+#T-nom {
+    opacity: 0;
+    animation: slideT 1.3s ease-out forwards;
+    animation-delay: 0.4s;
+    transform-origin: center;
+}
+
+@keyframes slideT {
+    0% {
+        transform: translateX(80px) translateY(-200px) rotate(110deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+#O-nom {
+    opacity: 0;
+    animation: slideO 1.3s ease-out forwards;
+    animation-delay: 0.4s;
+    transform-origin: center;
+}
+
+@keyframes slideO {
+    0% {
+        transform: translateX(100px) translateY(160px) rotate(-30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+#N-bis-nom {
+    opacity: 0;
+    animation: slideN-bis 1.3s ease-out forwards;
+    animation-delay: 0.5s;
+    transform-origin: center;
+}
+
+@keyframes slideN-bis {
+    0% {
+        transform: translateX(270px) translateY(-70px) rotate(105deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+}

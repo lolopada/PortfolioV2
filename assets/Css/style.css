@@ -7,6 +7,11 @@ body {
             var(--color-strong-cyan)100%);
 }
 
+@font-face {
+    font-family: 'Moon-Regular';
+    src: url('../Polices/MOON/Moon2.0-Regular.otf') format('opentype');
+}
+
 :root {
     /*palette principale*/
     --color-very-dark-blue: #051f34;
@@ -20,24 +25,55 @@ body {
     --color-slightly-desaturated-cyan: #7fb9c2;
     --color-light-grayish-cyan-lime-green: #e7f0ed;
     --color-dark-grayish-cyan: #95acb2;
-    --color-mostly-desaturated-dark-blue: #628ca6 ;
+    --color-mostly-desaturated-dark-blue: #628ca6;
+
+    /*import Police Moon */
+    --font-Moon-regular: 'Moon-Regular', sans-serif;
 }   
 
 header {
     width: 100%;
-    height: 1000px;
-    /* A CHANGER*/
+    height: 1000px; /* A CHANGER*/
     position: relative;
-    
+    font-family: var(--font-Moon-regular);
 }
+
+.nom-container {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nom-container span {
+    color: var(--color-very-dark-blue);
+    font-size: 7vw;
+    letter-spacing: 0.15em;
+}
+.O-nom-bulle {height: 7.4vw; margin-top: 1.7vw; margin-right: 0.4vw}
 
 .animation-bulles-container {
     width: 100%;
     position: absolute;
     bottom: 0;
     height: 10px;
+    background-color: green;
 }
 
+.coral-container {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    top:70%;
+    background-color: red;
+}
+
+.coral-para1 {
+    position: absolute;
+    height: 40vw;
+    right: 7vw;
+}
 
 main {
     position: relative;

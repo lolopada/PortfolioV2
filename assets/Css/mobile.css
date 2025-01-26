@@ -1,6 +1,29 @@
 @media screen and (max-width: 800px) {
 
-    
+    /*DEBUT BULLES ANIMATION SETTINGS*/
+    #bulle-3,
+    #bulle-5,
+    #bulle-7,
+    #bulle-8,
+    #bulle-11,
+    #bulle-13,
+    #bulle-14,
+    #bulle-16,
+    #bulle-18,
+    #bulle-20,
+    #bulle-22,
+    #bulle-24,
+    #bulle-26,
+    #bulle-28,
+    #bulle-30,
+    #bulle-32,
+    #bulle-34,
+    #bulle-36,
+    #bulle-38 {
+        display: none !important;
+    }
+    /*FIN BULLES ANIMATION SETTINGS*/
+
     /*DEBUT NOM PRENOM*/
     .nom-container,.prenom-container {
         height: 15vw;
@@ -31,4 +54,21 @@
     #C-prenom { left: calc(50% + 5vw); }
     /*FIN NOM PRENOM*/
     
+    /*Section A propos de moi*/
+    .title-section {
+        font-family: var(--font-Moon-regular);
+        font-size: 7.5vw;
+        color:var(--color-very-dark-blue);
+        position: absolute;
+        text-align: right;
+        top: 60vw;
+        right: -80vw;
+    
+        letter-spacing: 0.2rem;
+    }
+    @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+        100% { transform: translateY(0px); }
+    }
 }

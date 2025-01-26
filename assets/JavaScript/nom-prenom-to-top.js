@@ -2,46 +2,45 @@
 const nomAnimation = new TimelineLite({
     paused: false // L'animation démarre automatiquement
 });
-
 // Animation pour S
 nomAnimation.from("#S-nom", 1.0, {
-    x: -300,
-    y: -60,
-    rotation: -45,
+    x: -150,
+    y: -100,
+    rotation: 90,
     opacity: 0,
     transformOrigin: "center center",
     ease: Power1.easeOut
-});
+}, "+=0.3"); // Added delay before SAINTON starts
 
 // Animation pour A
 nomAnimation.from("#A-nom", 1.0, {
-    x: -200,
-    y: 230,
-    rotation: 95,
+    x: 100,
+    y: -150,
+    rotation: -60,
     opacity: 0,
     transformOrigin: "center center",
     ease: Power1.easeOut
-}, "-=1.2"); // Commence 0.1s après le début de l'animation précédente
+}, "-=0.8");
 
 // Animation pour I
 nomAnimation.from("#I-nom", 1.0, {
-    x: -100,
-    y: -180,
-    rotation: 120,
-    opacity: 0,
-    transformOrigin: "center center",
-    ease: Power1.easeOut
-}, "-=1.1");
-
-// Animation pour N
-nomAnimation.from("#N-nom", 1.0, {
-    x: 70,
+    x: -120,
     y: 200,
     rotation: -120,
     opacity: 0,
     transformOrigin: "center center",
     ease: Power1.easeOut
-}, "-=1.0");
+}, "-=0.7");
+
+// Animation pour N
+nomAnimation.from("#N-nom", 1.0, {
+    x: 80,
+    y: -200,
+    rotation: 110,
+    opacity: 0,
+    transformOrigin: "center center",
+    ease: Power1.easeOut
+}, "-=0.6");
 
 // Animation pour T
 nomAnimation.from("#T-nom", 1.0, {
@@ -51,7 +50,7 @@ nomAnimation.from("#T-nom", 1.0, {
     opacity: 0,
     transformOrigin: "center center",
     ease: Power1.easeOut
-}, "-=0.9");
+}, "-=0.5");
 
 // Animation pour O
 nomAnimation.from("#O-nom", 1.0, {
@@ -61,7 +60,7 @@ nomAnimation.from("#O-nom", 1.0, {
     opacity: 0,
     transformOrigin: "center center",
     ease: Power1.easeOut
-}, "-=0.9");
+}, "-=0.4");
 
 // Animation pour N-bis
 nomAnimation.from("#N-bis-nom", 1.0, {
@@ -71,7 +70,7 @@ nomAnimation.from("#N-bis-nom", 1.0, {
     opacity: 0,
     transformOrigin: "center center",
     ease: Power1.easeOut
-}, "-=0.8");
+}, "-=0.3");
 
 // Animation pour le prénom
 ["L", "O", "I", "C"].forEach((letter, index) => {
@@ -98,7 +97,7 @@ const move_S_nom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "1vw" : "1vw", top: "1vw" }
+        { left: isMobile ? "1vw" : "1vw", top: isMobile ? "3vw" : "1vw" }
     ]
 };
 
@@ -106,7 +105,7 @@ const move_A_nom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "6.8vw" : "4.8vw", top: "1vw" }
+        { left: isMobile ? "6.8vw" : "4.8vw",top: isMobile ? "3vw" : "1vw" }
     ]
 };
 
@@ -114,7 +113,7 @@ const move_I_nom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "15vw" : "9.6vw", top: "1vw" }
+        { left: isMobile ? "15vw" : "9.6vw", top: isMobile ? "3vw" : "1vw" }
     ]
 };
 
@@ -122,7 +121,7 @@ const move_N_nom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "16.6vw" : "10.6vw", top: "1vw" }
+        { left: isMobile ? "16.6vw" : "10.6vw", top: isMobile ? "3vw" : "1vw" }
     ]
 };
 
@@ -130,7 +129,7 @@ const move_T_nom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "24vw" : "15vw", top: "1vw" }
+        { left: isMobile ? "24vw" : "15vw", top: isMobile ? "3vw" : "1vw" }
     ]
 };
 
@@ -138,7 +137,7 @@ const move_O_nom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "31.1vw" : "19.1vw", top: "1vw" }
+        { left: isMobile ? "31.1vw" : "19.1vw", top: isMobile ? "3vw" : "1vw" }
     ]
 };
 
@@ -146,7 +145,7 @@ const move_N_bis_nom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "41.8vw" : "26.8vw", top: "1vw" }
+        { left: isMobile ? "41.8vw" : "26.8vw", top: isMobile ? "3vw" : "1vw" }
     ]
 };
 
@@ -154,7 +153,7 @@ const move_L_prenom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "1vw" : "1vw", top: isMobile ? "14vw" : "10vw" }
+        { left: isMobile ? "1vw" : "1vw", top: isMobile ? "17vw" : "10vw" }
     ]
 };
 
@@ -162,7 +161,7 @@ const move_O_prenom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "6.3vw" : "4.5vw", top: isMobile ? "14vw" : "10vw" }
+        { left: isMobile ? "6.3vw" : "4.5vw", top: isMobile ? "17vw" : "10vw" }
     ]
 };
 
@@ -170,7 +169,7 @@ const move_I_prenom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "17vw" : "12.5vw", top: isMobile ? "14vw" : "10vw" }
+        { left: isMobile ? "17vw" : "12.5vw", top: isMobile ? "17vw" : "10vw" }
     ]
 };
 
@@ -178,7 +177,7 @@ const move_C_prenom_path = {
     curviness: 0,
     autoRotate: false,
     values: [
-        { left: isMobile ? "18.7vw" : "13.5vw", top: isMobile ? "14vw" : "10vw" }
+        { left: isMobile ? "18.7vw" : "13.5vw", top: isMobile ? "17vw" : "10vw" }
     ]
 };
 

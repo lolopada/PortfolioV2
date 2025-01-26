@@ -24,6 +24,10 @@
     }
     /*FIN BULLES ANIMATION SETTINGS*/
 
+    .header-space {
+        height: 350px;
+    }
+
     /*DEBUT NOM PRENOM*/
     .nom-container,.prenom-container {
         height: 15vw;
@@ -54,6 +58,9 @@
     #C-prenom { left: calc(50% + 5vw); }
     /*FIN NOM PRENOM*/
     
+    section {
+        height: 650px;
+    }
     /*Section A propos de moi*/
     .title-section {
         font-family: var(--font-Moon-regular);
@@ -61,7 +68,7 @@
         color:var(--color-very-dark-blue);
         position: absolute;
         text-align: right;
-        top: 60vw;
+        top: 45vw;
         right: -80vw;
     
         letter-spacing: 0.2rem;
@@ -71,4 +78,34 @@
         50% { transform: translateY(-7px); }
         100% { transform: translateY(0px); }
     }
+
+    .section-text-a-propos-de-moi-1 {
+        font-size: 4.7vw;
+        width: 93%;
+    }
+    
+    .logo-banniere-1 {
+        bottom: 9%;
+    }
+    .logo-banniere-2 {
+        bottom: 0;
+    }
+    .logo-banniere-1, .logo-banniere-2 {
+        height: 50px; /* Reduced height */
+        display: flex;
+        align-items: center;
+    }
+    .wrapper-1, .wrapper-2 {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo-left, .logo-right {
+        width: 30px;
+        height: 30px;
+        margin-right: 25px; 
+        margin-top: 0;
+    }
+    
 }

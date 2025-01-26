@@ -129,9 +129,51 @@
     <div class="start-nom-to-top-animation"></div>
 
     <main>
-        <section class="section-a-propos-de-moi">
+        <section class="section-para">
             <h1 class="title-section">
-                <span>A</span> <span>p</span><span>r</span><span>o</span><span>p</span><span>o</span><span>s</span> <span>d</span><span>e</span> <span>m</span><span>o</span><span>i</span>
+                <span>A</span> <span>p</span><span>r</span><span>o</span><span>p</span><span>o</span><span>s</span>
+                <span>d</span><span>e</span> <span>m</span><span>o</span><span>i</span>
+            </h1>
+            <div class="section-text-a-propos-de-moi-1">
+                Je suis étudiant en BUT Informatique à l'IUT de Fontainebleau. Passionné par la programmation, le
+                développement et les projets en équipe, je m'investis pleinement dans mes études pour continuer à
+                progresser et développer mes compétences.
+            </div>
+            <div class="text-a-propos-de-moi-2"></div>
+
+            <div class="logo-banniere-1">
+                <div class="wrapper-1">
+                        <!-- Premier set de logos -->
+                        <img src="assets/Img/logos/html.svg" alt="HTML" class="logo-left">
+                        <img src="assets/Img/logos/css.svg" alt="CSS" class="logo-left">
+                        <img src="assets/Img/logos/javascript.png" alt="JavaScript" class="logo-left">
+                        <img src="assets/Img/logos/python.svg" alt="Python" class="logo-left">
+                        <img src="assets/Img/logos/c_language.svg" alt="C" class="logo-left">
+                        <img src="assets/Img/logos/java.svg" alt="Java" class="logo-left">
+                        <img src="assets/Img/logos/processing.svg" alt="Processing" class="logo-left">
+                        <img src="assets/Img/logos/sql.svg" alt="SQL" class="logo-left">
+                        <img src="assets/Img/logos/magicscroll.png" alt="SQL" class="logo-left">
+                </div>
+            </div>
+            <div class="logo-banniere-2">
+                <div class="wrapper-2">
+                        <!-- deuxieme set de logos -->
+                        <img src="assets/Img/logos/emacs.svg" alt="HTML" class="logo-right">
+                        <img src="assets/Img/logos/figma.svg" alt="CSS" class="logo-right">
+                        <img src="assets/Img/logos/git.svg" alt="JavaScript" class="logo-right">
+                        <img src="assets/Img/logos/mint.svg" alt="Python" class="logo-right">
+                        <img src="assets/Img/logos/tlinux.svg" alt="Java" class="logo-right">
+                        <img src="assets/Img/logos/vscode.svg" alt="Processing" class="logo-right">
+                        <img src="assets/Img/logos/github.svg" alt="SQL" class="logo-right">
+                        <img src="assets/Img/logos/windows.svg" alt="SQL" class="logo-right">
+                </div>
+            </div>
+
+        </section>
+        <section class="section-para">
+            <h1 class="title-section">
+                <span>M</span><span>o</span><span>n</span>
+                <span>p</span><span>a</span><span>r</span><span>c</span><span>o</span><span>u</span><span>r</span><span>s</span>
             </h1>
             <br><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
@@ -143,23 +185,10 @@
                 dolores nisi?</p>
 
         </section>
-        <section class="section-a-propos-de-moi">
+        <section class="section-para">
             <h1 class="title-section">
-                <span>M</span><span>o</span><span>n</span> <span>p</span><span>a</span><span>r</span><span>c</span><span>o</span><span>u</span><span>r</span><span>s</span>
-            </h1>
-            <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
-                dolor voluptatum ut ad blanditiis delectus rem corporis placeat, excepturi beatae vitae impedit velit
-                dolores nisi?</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
-                dolor voluptatum ut ad blanditiis delectus rem corporis placeat, excepturi beatae vitae impedit velit
-                dolores nisi?</p>
-
-        </section>
-        <section class="section-a-propos-de-moi">
-            <h1 class="title-section">
-                <span>M</span><span>e</span><span>s</span> <span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>t</span><span>s</span>
+                <span>M</span><span>e</span><span>s</span>
+                <span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>t</span><span>s</span>
             </h1>
             <br><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
@@ -190,6 +219,8 @@
 
     <!-- 4. Custom Animations -->
     <script src="assets/JavaScript/scroll-top-when-page-is-reload.js"></script>
+    <script src="assets/JavaScript/logo-banner-animation-left.js"></script>
+    <script src="assets/JavaScript/logo-banner-animation-right.js"></script>
     <!-- 3. Load popup first -->
     <script src="assets/JavaScript/pop-up-welcome.js"></script>
 
@@ -203,7 +234,8 @@
                 'assets/JavaScript/scroll-top-when-page-is-reload.js',
                 'assets/JavaScript/bulle-animation.js',
                 'assets/JavaScript/nom-prenom-to-top.js',
-                'assets/JavaScript/title-section.js'
+                'assets/JavaScript/title-section.js',
+                'assets/JavaScript/content-a-propos-animation.js'
             ];
 
             scripts.forEach(src => {

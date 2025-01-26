@@ -5,8 +5,8 @@ function createTitleAnimation(titleElement) {
         curviness: 0,
         autoRotate: false,
         values: [
-            { right: isMobile2 ? "13vw" : "8vw", top: isMobile2 ? "27vw" : "5vw", opacity:1 },
-            { right: isMobile2 ? "13vw" : "8vw", top: isMobile2 ? "27vw" : "5vw", opacity:1  },
+            { right: isMobile2 ? "7vw" : "8vw", top: isMobile2 ? "42vw" : "5vw", opacity:1 },
+            { right: isMobile2 ? "7vw" : "8vw", top: isMobile2 ? "42vw" : "5vw", opacity:1  },
             { right: isMobile2 ? "-70vw" : "15vw", top: isMobile2 ? "-10vw" : "-10vw", opacity:0  }
         ]
     };
@@ -40,18 +40,13 @@ const controller = new ScrollMagic.Controller();
 // Select all section titles and create scenes
 document.querySelectorAll('.title-section').forEach((title, index) => {
     const scene = new ScrollMagic.Scene({
-        triggerElement: title.closest('.section-a-propos-de-moi'),
-        duration: 1500,
-        triggerHook: 0,
+        triggerElement: title.closest('.section-para'),
+        duration: isMobile2 ? 1100 : 1500,
+        triggerHook: isMobile2 ? -0.2 : 0,
         reverse: true
     })
     .setTween(createTitleAnimation(title))
-    .setPin(title.closest('.section-a-propos-de-moi'))
-    .addIndicators({
-        name: `title-section-${index}`,
-        colorTrigger: "red",
-        colorStart: "red",
-        colorEnd: "red"
-    })
+    .setPin(title.closest('.section-para'))
+    //.addIndicators({name: `title-section-${index}`,colorTrigger: "red",colorStart: "red",colorEnd: "red"})
     .addTo(controller);
 });

@@ -51,10 +51,10 @@ body.animations-paused *:not(#welcome-popup, #welcome-popup *) {
 
 header {
     width: 100%;
-    height: 800px; /* A CHANGER*/
+    height: 10px; /* A CHANGER*/
     position: fixed;
     font-family: var(--font-Moon-regular);
-    z-index: 49;
+    z-index: 2;
 }
 
 .header-space-for-margin-top {
@@ -66,7 +66,7 @@ header {
 /*DEBUT NOM PRENOM*/
 .nom-container {
     width: 100%;
-    height: 10vw; /* Add height to contain absolute elements */
+    height: 1px; /* Add height to contain absolute elements */
 }
 
 .nom-container span {
@@ -87,7 +87,8 @@ header {
 
 .prenom-container {
     width: 100%;
-    height: 10vw; /* Add height to contain absolute elements */
+    margin-top: 10vw;
+    height: 1px; /* Add height to contain absolute elements */
 }
 
 .prenom-container span {
@@ -107,7 +108,7 @@ header {
 .animation-bulles-container {
     width: 100%;
     position: absolute;
-    bottom: -250px;
+    bottom: -1050px;
     height: 10px;
 }
 
@@ -195,11 +196,45 @@ section {
     font-size: 1.2vw;
     position: absolute;
     width: 60%;
-    padding: 4vw;
+    padding-top: 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
     top:40%;
     opacity: 0;
+    z-index: 100;
 }
 
+.section-reseau-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2vw;
+    gap: 2vw;
+}
+
+.section-reseau-logo div {
+    display: flex;
+    align-items: center;
+    margin-top: -0.5vw;  /* Ajout d'une marge négative pour remonter légèrement */
+}
+
+.logo-reseau {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo-reseau:hover {
+    transform: scale(1.1);
+}
+
+.lien-a-clean {
+    text-decoration: none;
+    color: var(--color-very-dark-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
 
 .logo-banniere-1 {
     width: 100%;

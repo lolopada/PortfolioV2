@@ -83,6 +83,34 @@
         font-size: 4.7vw;
         width: 93%;
     }
+
+    /* Social Media Logo */
+    .logo-reseau {
+        height: 30px;
+        width: 30px;
+    }
+
+    .section-reseau-logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 4vw;
+        gap: 4vw;
+    }
+
+    .section-reseau-logo div {
+        margin-top: 0;
+    }
+
+    .lien-a-clean {
+        font-size: 3.5vw;
+        gap: 2vw;
+    }
+
+    /* Add touch-friendly tap target */
+    .logo-reseau:active {
+        transform: scale(0.95);
+    }
     
     .logo-banniere-1 {
         bottom: 9%;

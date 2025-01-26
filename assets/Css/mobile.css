@@ -37,7 +37,7 @@
         color: var(--color-very-dark-blue);
         font-size: 12vw;
     }
-    .O-nom-bulle {height: 10.4vw; margin-top: 2.7vw; margin-right: 0.4vw}
+    .O-nom-bulle {height: 10.4vw; width: 10.4vw;margin-top: 2.7vw; margin-right: 0.4vw}
 
     #S-nom { left: calc(50% - 24.4vw); }
     #A-nom { left: calc(50% - 18.54vw); }
@@ -51,7 +51,7 @@
         color: var(--color-very-dark-blue);
         font-size: 12vw;
     }
-    .O-prenom-bulle {height: 10.4vw; margin-top: 2.7vw; margin-right: 0.4vw}
+    .O-prenom-bulle {height: 10.4vw;width: 10.4vw; margin-top: 2.7vw; margin-right: 0.4vw}
     #L-prenom { left: calc(50% - 13.15vw); }
     #O-prenom { left: calc(50% - 7.45vw); }
     #I-prenom { left: calc(50% + 3.4vw); }
@@ -102,7 +102,6 @@
     }
 
     .logo-left, .logo-right {
-        width: 30px;
         height: 30px;
         margin-right: 25px; 
         margin-top: 0;

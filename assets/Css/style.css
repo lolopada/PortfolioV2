@@ -15,14 +15,19 @@ body.animations-paused *:not(#welcome-popup, #welcome-popup *) {
 @font-face {
     font-family: 'Moon-Regular';
     src: url('../Polices/MOON/Moon2.0-Regular.otf') format('opentype');
+    font-display: swap;
 }
+
 @font-face {
-    font-family: 'Moon-Bold';
+    font-family: 'Moon-Bold'; 
     src: url('../Polices/MOON/Moon2.0-Bold.otf') format('opentype');
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'Moon-Light';
     src: url('../Polices/MOON/Moon2.0-Light.otf') format('opentype');
+    font-display: swap;
 }
 
 :root {
@@ -78,7 +83,7 @@ header {
 #O-nom { left: calc(50% + 2.785vw); }
 #N-bis-nom { left: calc(50% + 10.55vw); }
 
-.O-nom-bulle {height: 7.4vw; margin-top: 1vw; margin-right: 0.4vw}
+.O-nom-bulle {height: 7.4vw; width: 7.4vw; margin-top: 1vw; margin-right: 0.4vw}
 
 .prenom-container {
     width: 100%;
@@ -96,7 +101,7 @@ header {
 #I-prenom { left: calc(50% + 2.75vw); }
 #C-prenom { left: calc(50% + 3.7vw); }
 
-.O-prenom-bulle {height: 7.4vw; margin-top: 0.9vw; margin-right: 0.4vw}
+.O-prenom-bulle {height: 7.4vw;width: 7.4vw; margin-top: 0.9vw; margin-right: 0.4vw}
 /*FIN NOM PRENOM*/
 
 .animation-bulles-container {

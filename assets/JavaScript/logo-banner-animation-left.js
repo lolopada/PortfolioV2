@@ -1,56 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('logo-banner-animation.js loaded');
+    // 1. Wrapper validation
     const wrapper = document.querySelector('.wrapper-1');
     if (!wrapper) {
-        console.log('Wrapper not found');
+        console.error('Wrapper element not found');
         return;
     }
-    const logos = Array.from(wrapper.children);
-    console.log(`Number of logos: ${logos.length}`);
 
-    let speed = 0.3; // pixels per frame
+    // 2. Initial setup
+    let speed = 0.3;
     let currentOffset = 0;
+    let totalWidth = 0;
 
-    // Calculate total width of logos
+    // 3. Calculate total width and clone logos
+    const logos = Array.from(wrapper.children);
     const wrapperWidth = wrapper.offsetWidth;
-    let totalLogosWidth = logos.reduce((total, logo) => {
+
+    // Calculate initial total width
+    totalWidth = logos.reduce((total, logo) => {
         const style = getComputedStyle(logo);
-        return total + logo.offsetWidth + parseInt(style.marginRight);
+        const width = logo.offsetWidth + parseInt(style.marginRight || 0);
+        return total + width;
     }, 0);
 
-    // Clone additional logos if needed
-    while (totalLogosWidth < wrapperWidth) {
+    // 4. Clone logos until width requirement met
+    while (totalWidth < wrapperWidth * 2) {
         logos.forEach(logo => {
             const clone = logo.cloneNode(true);
             wrapper.appendChild(clone);
-            totalLogosWidth += logo.offsetWidth + parseInt(getComputedStyle(logo).marginRight);
+            const style = getComputedStyle(clone);
+            totalWidth += clone.offsetWidth + parseInt(style.marginRight || 0);
         });
     }
 
-    // Clone les logos pour assurer un défilement continu
-    logos.forEach(logo => {
-        const clone = logo.cloneNode(true);
-        wrapper.appendChild(clone);
-    });
-
+    // 5. Animation function
     function animate() {
         currentOffset -= speed;
         wrapper.style.transform = `translateX(${currentOffset}px)`;
 
-        // Obtenir la largeur du premier logo incluant la marge droite
-        const firstLogo = wrapper.children[0];
-        const firstLogoStyle = getComputedStyle(firstLogo);
-        const firstLogoWidth = firstLogo.offsetWidth + parseInt(firstLogoStyle.marginRight);
+        // Get first logo dimensions
+        const firstLogo = wrapper.firstElementChild;
+        if (firstLogo) {
+            const style = getComputedStyle(firstLogo);
+            const width = firstLogo.offsetWidth + parseInt(style.marginRight || 0);
 
-        // Lorsque le premier logo a complètement disparu à gauche
-        if (Math.abs(currentOffset) >= firstLogoWidth) {
-            wrapper.appendChild(firstLogo);
-            currentOffset += firstLogoWidth;
-            wrapper.style.transform = `translateX(${currentOffset}px)`;
+            // Recycle when logo moves off screen
+            if (Math.abs(currentOffset) >= width) {
+                wrapper.appendChild(firstLogo);
+                currentOffset += width;
+                wrapper.style.transform = `translateX(${currentOffset}px)`;
+            }
         }
 
         requestAnimationFrame(animate);
     }
 
+    // 6. Start animation
     animate();
 });

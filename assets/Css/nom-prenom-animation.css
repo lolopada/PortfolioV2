@@ -1,6 +1,5 @@
 #S-nom {
-    animation: slideS 1.3s ease-out forwards;
-    transform-origin: center;
+    opacity: 0;
 }
 
 @keyframes slideS {
@@ -193,3 +192,4 @@
         opacity: 1;
     }
 }
+

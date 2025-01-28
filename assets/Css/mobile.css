@@ -135,4 +135,37 @@
         margin-top: 0;
     }
     
+    .scroll-container-2 {
+        right: 13%;
+        bottom: 20%;
+        transform: scale(0.7);
+    }
+    
+    .scroll-container-2 a {
+        padding-top: 60px; 
+        font-size: 0.7em; 
+    }
+    
+    .scroll-container-2 a span {
+        width: 20px; 
+        height: 20px; 
+        margin-left: -10px;
+    } 
+
+    .scroll-container-3 {
+        right: 13%;
+        bottom: 80%;
+        transform: scale(0.7);
+    }
+    
+    .scroll-container-3 a {
+        padding-top: 60px; 
+        font-size: 0.7em; 
+    }
+    
+    .scroll-container-3 a span {
+        width: 20px; 
+        height: 20px; 
+        margin-left: -10px;
+    }
 }

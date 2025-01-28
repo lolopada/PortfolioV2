@@ -7,7 +7,7 @@ const move_text_path = {
         { opacity: 0 },
         { opacity: 1 },
         { opacity: 1 },
-        { opacity: 0 }
+        { opacity: 0 , top: "0%", transform : "rotate(-5deg)"}
     ]
 };
 
@@ -70,6 +70,8 @@ tween3
     .to(textElement, 0.8, {
         left: move_text_path.values[3].left,
         opacity: move_text_path.values[3].opacity,
+        top: move_text_path.values[3].top,
+        transform: move_text_path.values[3].transform,
         ease: Power1.easeIn
     })
     .to(logoElement1, 0.8, {

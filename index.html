@@ -45,21 +45,28 @@
     <link rel="stylesheet" href="./assets/Css/style.css">
     <link rel="stylesheet" href="./assets/Css/pop-up-welcome.css">
     <link rel="stylesheet" href="./assets/Css/bulles-animation.css">
+    <link rel="stylesheet" href="./assets/Css/scroll-down.css">
 
     <link rel="stylesheet" href="./assets/Css/mobile.css">
 </head>
 
-<body>
+<body id="top">
     <div id="welcome-popup" class="popup-overlay">
         <div class="popup-content">
-            <h2>Bienvenue sur mon Portfolio!</h2>
-            <p>Pour une expérience optimale, évitez de zoomer ou de redimensionner la fenêtre pendant votre visite. Si
-                vous modifiez la taille de la fenêtre, je vous recommande de rafraîchir la page pour garantir le bon
-                fonctionnement des animations.</p>
-            <p>Privilégiez la consultation de cette page web sur un ordinateur pour profiter d'un rendu optimal.</p>
-            <p>Merci de votre visite.</p>
-
-            <button id="close-popup">Fermer</button>
+            <div class="popup-bubbles">
+                <div class="decoration-bubble bubble-1"></div>
+                <div class="decoration-bubble bubble-2"></div>
+                <div class="decoration-bubble bubble-3"></div>
+            </div>
+            <h2 class="popup-title">Bienvenue sur mon Portfolio!</h2>
+            <div class="popup-text">
+                <p class="popup-paragraph">Pour une expérience optimale, évitez de zoomer ou de redimensionner la fenêtre pendant votre visite.</p>
+                <p class="popup-paragraph">Privilégiez la consultation sur ordinateur pour un rendu optimal.</p>
+                <p class="popup-paragraph">Merci de votre visite.</p>
+            </div>
+            <button id="close-popup">
+                <span>Explorer</span>
+            </button>
         </div>
     </div>
     <header class="header-container">
@@ -124,14 +131,19 @@
             <img src="assets/Img/Bulles/bulle_2.svg" alt="bulle" class="bulle-para4 bulle" id="bulle-37"> <!-- 4vw -->
             <img src="assets/Img/Bulles/bulle_4.svg" alt="bulle" class="bulle-para4 bulle" id="bulle-38"> <!-- 3.7vw -->
         </div>
+
+        
     </header>
 
     <div class="header-space"></div>
+    <div class="scroll-container">
+            <a href="#first-section"><span></span><span></span><span></span>Scroll</a>
+        </div>
     <div class="start-nom-to-top-animation"></div>
 
     <main>
-        <section class="section-para">
-            <h1 class="title-section">
+        <section class="section-para section-1">
+            <h1 class="title-section" id="first-section">
                 <span>A</span> <span>p</span><span>r</span><span>o</span><span>p</span><span>o</span><span>s</span>
                 <span>d</span><span>e</span> <span>m</span><span>o</span><span>i</span>
             </h1>
@@ -180,9 +192,15 @@
                     <img src="assets/Img/logos/windows.svg" alt="SQL" class="logo-right">
                 </div>
             </div>
-
+            <div class="scroll-container-3">
+                <a href="#top"><span></span><span></span><span></span></a>
+            </div>
+            <div class="scroll-container-2">
+                <a href="#section-second"><span></span><span></span><span></span></a>
+            </div>
         </section>
-        <section class="section-para">
+        
+        <section class="section-para" id="section-second">
             <h1 class="title-section">
                 <span>M</span><span>o</span><span>n</span>
                 <span>p</span><span>a</span><span>r</span><span>c</span><span>o</span><span>u</span><span>r</span><span>s</span>
@@ -247,7 +265,8 @@
                 'assets/JavaScript/bulle-animation.js',
                 'assets/JavaScript/nom-prenom-to-top.js',
                 'assets/JavaScript/title-section.js',
-                'assets/JavaScript/content-a-propos-animation.js'
+                'assets/JavaScript/content-a-propos-animation.js',
+                'assets/JavaScript/scroll-container-animation.js'
             ];
 
             scripts.forEach(src => {

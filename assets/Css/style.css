@@ -12,6 +12,13 @@ body.animations-paused *:not(#welcome-popup, #welcome-popup *) {
     animation-play-state: paused !important;
 }
 
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Polices/Montserrat/Montserrat-Light.otf') format('opentype');
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'Moon-Regular';
     src: url('../Polices/MOON/Moon2.0-Regular.otf') format('opentype');
@@ -143,7 +150,7 @@ section {
     height: 850px;
     position: relative;
     margin-bottom: 100px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .title-section {

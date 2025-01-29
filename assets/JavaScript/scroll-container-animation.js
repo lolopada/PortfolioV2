@@ -127,7 +127,7 @@ scrollAnimation2
 const scrollScene2 = new ScrollMagic.Scene({
     triggerElement: ".section-1",
     triggerHook: isMobilescroll() ? -0.2 : 0,
-    duration: isMobilescroll() ? 1100 : 1500,
+    duration: isMobilescroll() ? 1100 : 1700,
     reverse: true
 })
 .setTween(scrollAnimation2)
@@ -181,7 +181,7 @@ scrollAnimation3
 const scrollScene3 = new ScrollMagic.Scene({
     triggerElement: ".section-1",
     triggerHook: isMobilescroll() ? -0.2 : 0,
-    duration: isMobilescroll() ? 1100 : 1500,
+    duration: isMobilescroll() ? 1100 : 1700,
     reverse: true
 })
 .setTween(scrollAnimation3)

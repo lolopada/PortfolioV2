@@ -78,7 +78,7 @@ const scrollScene = new ScrollMagic.Scene({
 
 
 
-
+//pour le scroll 2
 
 // Initialize controller
 const controller_scroll2 = new ScrollMagic.Controller();
@@ -186,3 +186,112 @@ const scrollScene3 = new ScrollMagic.Scene({
 })
 .setTween(scrollAnimation3)
 .addTo(controller_scroll2);
+
+
+
+
+//pour le scroll 4
+
+// Initialize controller
+const controller_scroll4 = new ScrollMagic.Controller();
+
+// Create timeline for scroll container animation
+const scrollAnimation4 = new TimelineLite();
+
+// Add smooth scroll functionality for second container
+document.querySelector('.scroll-container-4 a').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Get target section more specifically
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    console.log('Target section:', targetSection);
+    
+    if (targetSection) {
+        // Calculate proper offset including any headers or fixed elements
+        const headerOffset = isMobilescroll() ? 170 : 200; // Adjust these values as needed
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        smoothScroll(offsetPosition, 2000); // 2000ms duration
+    } else {
+        console.error('Target section not found');
+    }
+});
+
+scrollAnimation4
+    .to('.scroll-container-4', 0.5, {
+        autoAlpha: 1,
+        y: 0,
+        ease: Power1.easeInOut,
+    })
+    .to('.scroll-container-4', 0.5, {
+        autoAlpha: 0.5,
+        y: 10,
+        ease: Power1.easeInOut
+    })
+    .to('.scroll-container-4', 0.5, {
+        autoAlpha: 0,
+        y: 20,
+        ease: Power1.easeInOut
+    });
+
+// Create scene for second section
+const scrollScene4 = new ScrollMagic.Scene({
+    triggerElement: ".section-2",
+    triggerHook: isMobilescroll() ? -0.2 : 0,
+    duration: isMobilescroll() ? 1100 : 1700,
+    reverse: true
+})
+.setTween(scrollAnimation4)
+.addTo(controller_scroll4);
+
+
+// pour le scroll 5
+
+const scrollAnimation5 = new TimelineLite();
+
+document.querySelector('.scroll-container-5 a').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Get target section more specifically
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    console.log('Target section:', targetSection);
+    
+    if (targetSection) {
+        // Calculate proper offset including any headers or fixed elements
+        const headerOffset = isMobilescroll() ? 1400 : 2000; // Adjust these values as needed
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        smoothScroll(offsetPosition, 2000); // 2000ms duration
+    } else {
+        console.error('Target section not found');
+    }
+});
+
+
+scrollAnimation5
+    .to('.scroll-container-5', 0.5, {
+        autoAlpha: 1,
+        y: 0,
+        ease: Power1.easeInOut,
+    })
+    .to('.scroll-container-5', 0.5, {
+        autoAlpha: 0.5,
+        y: 10,
+        ease: Power1.easeInOut
+    })
+    .to('.scroll-container-5', 0.5, {
+        autoAlpha: 0,
+        y: 20,
+        ease: Power1.easeInOut
+    });
+
+const scrollScene5 = new ScrollMagic.Scene({
+    triggerElement: ".section-2",
+    triggerHook: isMobilescroll() ? -0.2 : 0,
+    duration: isMobilescroll() ? 1100 : 1700,
+    reverse: true
+})
+.setTween(scrollAnimation5)
+.addTo(controller_scroll4);

@@ -90,7 +90,7 @@
 
 /*deuxieme*/
 
-.scroll-container-2 {
+.scroll-container-2, .scroll-container-4 {
     opacity: 0;
     position: absolute;
     right: 111px;
@@ -100,7 +100,7 @@
     animation: floatScrollDown 3s ease-in-out infinite;
 }
 
-.scroll-container-2 a {
+.scroll-container-2 a, .scroll-container-4 a {
     padding-top: 80px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -111,7 +111,7 @@
     display: inline-block;
 }
 
-.scroll-container-2 a span {
+.scroll-container-2 a span, .scroll-container-4 a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -128,18 +128,18 @@
     box-sizing: border-box;
 }
 
-.scroll-container-2 a span:nth-of-type(1) {
+.scroll-container-2 a span:nth-of-type(1), .scroll-container-4 a span:nth-of-type(1) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
 
-.scroll-container-2 a span:nth-of-type(2) {
+.scroll-container-2 a span:nth-of-type(2), .scroll-container-4 a span:nth-of-type(2) {
     top: 16px;
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
 }
 
-.scroll-container-2 a span:nth-of-type(3) {
+.scroll-container-2 a span:nth-of-type(3), .scroll-container-4 a span:nth-of-type(3) {
     top: 32px;
     -webkit-animation-delay: .3s;
     animation-delay: .3s;
@@ -171,7 +171,7 @@
     }
 }
 
-.scroll-container-3 {
+.scroll-container-3, .scroll-container-5 {
     opacity: 0;
     position: absolute;
     right: 125px;
@@ -181,7 +181,7 @@
     animation: floatScrollUp 3s ease-in-out infinite;
 }
 
-.scroll-container-3 a {
+.scroll-container-3 a, .scroll-container-5 a {
     padding-top: 80px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -192,7 +192,7 @@
     display: inline-block;
 }
 
-.scroll-container-3 a span {
+.scroll-container-3 a span, .scroll-container-5 a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -208,18 +208,18 @@
     box-sizing: border-box;
 }
 
-.scroll-container-3 a span:nth-of-type(1) {
+.scroll-container-3 a span:nth-of-type(1), .scroll-container-5 a span:nth-of-type(1) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
 
-.scroll-container-3 a span:nth-of-type(2) {
+.scroll-container-3 a span:nth-of-type(2), .scroll-container-5 a span:nth-of-type(2) {
     top: 16px;
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
 }
 
-.scroll-container-3 a span:nth-of-type(3) {
+.scroll-container-3 a span:nth-of-type(3), .scroll-container-5 a span:nth-of-type(3) {
     top: 32px;
     -webkit-animation-delay: .3s;
     animation-delay: .3s;

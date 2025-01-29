@@ -47,6 +47,11 @@
     <link rel="stylesheet" href="./assets/Css/bulles-animation.css">
     <link rel="stylesheet" href="./assets/Css/scroll-down.css">
 
+    <!-- Stylesheets Flickity -->
+    <link rel="stylesheet" href="./assets/Css/flickity.css">
+    <link rel="stylesheet" href="./assets/Css/carousel-projet.css">
+
+    <!-- Stylesheets for mobile responsive-->
     <link rel="stylesheet" href="./assets/Css/mobile.css">
 </head>
 
@@ -60,7 +65,8 @@
             </div>
             <h2 class="popup-title">Bienvenue sur mon Portfolio!</h2>
             <div class="popup-text">
-                <p class="popup-paragraph">Pour une expérience optimale, évitez de zoomer ou de redimensionner la fenêtre pendant votre visite.</p>
+                <p class="popup-paragraph">Pour une expérience optimale, évitez de zoomer ou de redimensionner la
+                    fenêtre pendant votre visite.</p>
                 <p class="popup-paragraph">Privilégiez la consultation sur ordinateur pour un rendu optimal.</p>
                 <p class="popup-paragraph">Merci de votre visite.</p>
             </div>
@@ -132,16 +138,18 @@
             <img src="assets/Img/Bulles/bulle_4.svg" alt="bulle" class="bulle-para4 bulle" id="bulle-38"> <!-- 3.7vw -->
         </div>
 
-        
+
     </header>
 
     <div class="header-space"></div>
     <div class="scroll-container">
-            <a href="#first-section"><span></span><span></span><span></span>Scroll</a>
-        </div>
+        <a href="#first-section"><span></span><span></span><span></span>Scroll</a>
+    </div>
     <div class="start-nom-to-top-animation"></div>
 
     <main>
+
+
         <section class="section-para section-1">
             <h1 class="title-section" id="first-section">
                 <span>A</span> <span>p</span><span>r</span><span>o</span><span>p</span><span>o</span><span>s</span>
@@ -159,7 +167,8 @@
                             src="assets/Img/logos/linkedin.svg" alt="Linkedin" class="logo-reseau"></a>
                     <div>
                         <a href="assets/Pdf/CV_loic_sainton.pdf" download class="lien-a-clean"><img
-                                src="assets/Img/logos/circle-down-regular.svg" class="logo-reseau" alt="download">Télécharger mon
+                                src="assets/Img/logos/circle-down-regular.svg" class="logo-reseau"
+                                alt="download">Télécharger mon
                             CV</a>
                     </div>
                 </div>
@@ -193,45 +202,44 @@
                 </div>
             </div>
             <div class="scroll-container-3">
-                <a href="#top"><span></span><span></span><span></span><div class="flip-for-word-scroll">Monter</div></a>
+                <a href="#top"><span></span><span></span><span></span>
+                    <div class="flip-for-word-scroll">Monter</div>
+                </a>
             </div>
             <div class="scroll-container-2">
                 <a href="#section-second"><span></span><span></span><span></span>descendre</a>
             </div>
         </section>
-        
-        <section class="section-para" id="section-second">
-            <h1 class="title-section">
-                <span>M</span><span>o</span><span>n</span>
-                <span>p</span><span>a</span><span>r</span><span>c</span><span>o</span><span>u</span><span>r</span><span>s</span>
-            </h1>
-            <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
-                dolor voluptatum ut ad blanditiis delectus rem corporis placeat, excepturi beatae vitae impedit velit
-                dolores nisi?</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
-                dolor voluptatum ut ad blanditiis delectus rem corporis placeat, excepturi beatae vitae impedit velit
-                dolores nisi?</p>
 
-        </section>
-        <section class="section-para">
+
+        <section class="section-para section-2" id="section-second">
             <h1 class="title-section">
                 <span>M</span><span>e</span><span>s</span>
                 <span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>t</span><span>s</span>
             </h1>
-            <br><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
-                dolor voluptatum ut ad blanditiis delectus rem corporis placeat, excepturi beatae vitae impedit velit
-                dolores nisi?</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eligendi magnam, error iusto pariatur
-                dolor voluptatum ut ad blanditiis delectus rem corporis placeat, excepturi beatae vitae impedit velit
-                dolores nisi?</p>
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                <div class="gallery-cell">
+                    <div></div>
+                </div>
+                <div class="gallery-cell">
+                    <div></div>
+                </div>
+                <div class="gallery-cell">
+                    <div></div>
+                </div>
+            </div>
 
+            <div class="scroll-container-5">
+                <a href="#first-section"><span></span><span></span><span></span>
+                    <div class="flip-for-word-scroll">Monter</div>
+                </a>
+            </div>
+            <div class="scroll-container-4">
+                <a href="#footer-section"><span></span><span></span><span></span>descendre</a>
+            </div>
         </section>
     </main>
-    <footer>
+    <footer id="footer-section">
 
     </footer>
     <!-- 1. GSAP Core Scripts -->
@@ -246,6 +254,11 @@
     <!-- 3. ScrollMagic Plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
+
+    <!-- Script flickity-->
+    <script src="assets/JavaScript/scriptImport/flickity.pkgd.min.js"></script>
+
 
     <!-- 4. Custom Animations -->
     <script src="assets/JavaScript/scroll-top-when-page-is-reload.js"></script>

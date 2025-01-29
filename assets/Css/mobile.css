@@ -135,37 +135,46 @@
         margin-top: 0;
     }
     
-    .scroll-container-2 {
+    .scroll-container-2, .scroll-container-4 {
         right: 27px;
         top:61vh;
         transform: scale(0.7);
     }
+    .scroll-container-4 {
+        top:78vh;
+    }
+
     
-    .scroll-container-2 a {
+    .scroll-container-2 a, .scroll-container-4 a {
         padding-top: 60px; 
         font-size: 0.7em; 
     }
     
-    .scroll-container-2 a span {
+    .scroll-container-2 a span, .scroll-container-4 a span {
         width: 20px; 
         height: 20px; 
         margin-left: -10px;
     } 
 
-    .scroll-container-3 {
+    .scroll-container-3, .scroll-container-5 {
         right: 35px;
         top:8vh;
         transform: scale(0.7);
     }
     
-    .scroll-container-3 a {
+    .scroll-container-3 a, .scroll-container-5 a {
         padding-top: 60px; 
         font-size: 0.7em; 
     }
     
-    .scroll-container-3 a span {
+    .scroll-container-3 a span, .scroll-container-5 a span {
         width: 20px; 
         height: 20px; 
         margin-left: -10px;
+    }
+
+    .gallery {
+        width: 90vw;
+        top:32vh;
     }
 }

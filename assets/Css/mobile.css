@@ -136,7 +136,7 @@
     }
     
     .scroll-container-2, .scroll-container-4 {
-        right: 27px;
+        right: 17px;
         top:61vh;
         transform: scale(0.7);
     }
@@ -157,7 +157,7 @@
     } 
 
     .scroll-container-3, .scroll-container-5 {
-        right: 35px;
+        right: 25px;
         top:8vh;
         transform: scale(0.7);
     }

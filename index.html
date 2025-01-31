@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="./assets/Css/pop-up-welcome.css">
     <link rel="stylesheet" href="./assets/Css/bulles-animation.css">
     <link rel="stylesheet" href="./assets/Css/scroll-down.css">
+    <link rel="stylesheet" href="./assets/Css/fish.css">
 
     <!-- Stylesheets Flickity -->
     <link rel="stylesheet" href="./assets/Css/flickity.css">
@@ -75,7 +76,11 @@
             </button>
         </div>
     </div>
+    <div class="container-fish">
+        <img class="fish-1" src="assets/Img/scenes/fish1.svg" alt="fish 1">
+    </div>
     <header class="header-container">
+
         <div class="header-space-for-margin-top"></div>
         <div class="nom-container">
             <span id="S-nom">S</span><span id="A-nom">A</span><span id="I-nom">I</span><span id="N-nom">N</span><span
@@ -86,8 +91,6 @@
             <span id="L-prenom">L</span><span id="O-prenom"><img src="assets/Img/Bulles/bulle_5.svg" alt="bulle"
                     class="O-prenom-bulle"></span><span id="I-prenom">Ï</span><span id="C-prenom">C</span>
         </div>
-
-
 
         <div class="animation-bulles-container">
             <img src="assets/Img/Bulles/bulle_3.svg" alt="bulle" class="bulle-para2 bulle" id="bulle-1"> <!-- 3vw -->
@@ -137,16 +140,15 @@
             <img src="assets/Img/Bulles/bulle_2.svg" alt="bulle" class="bulle-para4 bulle" id="bulle-37"> <!-- 4vw -->
             <img src="assets/Img/Bulles/bulle_4.svg" alt="bulle" class="bulle-para4 bulle" id="bulle-38"> <!-- 3.7vw -->
         </div>
-
-
     </header>
+
 
     <div class="header-space"></div>
     <div class="scroll-container">
         <a href="#first-section"><span></span><span></span><span></span>Scroll</a>
     </div>
-    <div class="start-nom-to-top-animation"></div>
 
+    <div class="start-nom-to-top-animation"></div>
     <main>
 
 
@@ -279,7 +281,8 @@
                 'assets/JavaScript/nom-prenom-to-top.js',
                 'assets/JavaScript/title-section.js',
                 'assets/JavaScript/content-a-propos-animation.js',
-                'assets/JavaScript/scroll-container-animation.js'
+                'assets/JavaScript/scroll-container-animation.js',
+                'assets/JavaScript/fish-animation.js'
             ];
 
             scripts.forEach(src => {

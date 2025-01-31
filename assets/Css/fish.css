@@ -1,0 +1,14 @@
+.container-fish {
+    position: fixed;
+    width:100%;
+    height: 1px;
+}
+
+.fish-1 {
+    position: absolute;
+    width: 2vw;
+    top: 1vw;
+    left: -10vw;
+
+    z-index: -10;
+}

@@ -88,6 +88,13 @@
     }
 }
 
+.scroll-container a, .scroll-container-2 a, .scroll-container-3 a, .scroll-container-4 a, .scroll-container-5 a{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+
 /*deuxieme*/
 
 .scroll-container-2, .scroll-container-4 {

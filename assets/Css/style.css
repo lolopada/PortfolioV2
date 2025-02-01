@@ -235,6 +235,7 @@ section {
     transform: scale(1.1);
 }
 
+/*
 .lien-a-clean {
     text-decoration: none;
     color: var(--color-very-dark-blue);
@@ -242,6 +243,16 @@ section {
     align-items: center;
     gap: 0.5vw;
 }
+
+<div> 
+    <a href="assets/Pdf/CV_loic_sainton.pdf" download class="lien-a-clean">
+        <img src="assets/Img/logos/circle-down-regular.svg" class="logo-reseau"alt="download">
+        Télécharger mon CV
+    </a>
+</div>  
+
+A GARDER AU CAS OU 
+*/
 
 .logo-banniere-1 {
     width: 100%;

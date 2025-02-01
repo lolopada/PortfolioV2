@@ -1,14 +1,105 @@
 .container-fish {
     position: fixed;
-    width:100%;
+    width: 100%;
     height: 1px;
 }
 
 .fish-1 {
     position: absolute;
-    width: 2vw;
-    top: 1vw;
+    width: 2.5vw;
+    top: 3vh;
     left: -10vw;
-
     z-index: -10;
+}
+
+.fish-2 {
+    position: absolute;
+    width: 2.5vw;
+    top: 80vh;
+    left: -12vw;
+    z-index: -10;
+}
+
+.fish-1-grp-1,
+.fish-2-grp-1,
+.fish-3-grp-1 {
+    position: absolute;
+    width: 1.5vw;
+    opacity: 0.8;
+    z-index: -10;
+    animation: moveFishToRight 30s linear infinite;
+    animation-delay: 1s;
+}
+
+.fish-1-grp-1 {
+    top: 20vh;
+    left: -10vw;
+}
+.fish-2-grp-1{
+    top: 23vh;
+    left: -12vw;
+}
+
+.fish-3-grp-1{
+    top: 24.8vh;
+    left: -9.2vw;
+}
+
+@keyframes moveFishToRight {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    71.4% {
+        transform: translateX(120vw);
+    }
+
+    100% {
+        transform: translateX(120vw);
+    }
+}
+
+.fish-1-grp-2,
+.fish-2-grp-2,
+.fish-3-grp-2, 
+.fish-4-grp-2 {
+    position: absolute;
+    width: 1.5vw;
+    opacity: 0.8;
+    z-index: -10;
+    animation: moveFishToLeft 27s linear infinite;
+}
+
+.fish-1-grp-2 {
+    top:75vh;
+    right: -10vw;
+}
+
+.fish-2-grp-2 {
+    top:71.5vh;
+    right: -8.5vw;
+}
+
+.fish-3-grp-2 {
+    top:76vh;
+    right: -8vw;
+}
+
+.fish-4-grp-2 {
+    top:78.4vh;
+    right: -11vw;
+}
+
+@keyframes moveFishToLeft {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    71.4% {
+        transform: translateX(-120vw);
+    }
+
+    100% {
+        transform: translateX(-120vw);
+    }
 }

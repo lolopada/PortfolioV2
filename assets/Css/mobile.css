@@ -22,6 +22,7 @@
     #bulle-38 {
         display: none !important;
     }
+
     /*FIN BULLES ANIMATION SETTINGS*/
 
     .header-space {
@@ -29,7 +30,8 @@
     }
 
     /*DEBUT NOM PRENOM*/
-    .nom-container,.prenom-container {
+    .nom-container,
+    .prenom-container {
         height: 15vw;
     }
 
@@ -37,46 +39,101 @@
         color: var(--color-very-dark-blue);
         font-size: 12vw;
     }
-    .O-nom-bulle {height: 10.4vw; width: 10.4vw;margin-top: 2.7vw; margin-right: 0.4vw}
 
-    #S-nom { left: calc(50% - 24.4vw); }
-    #A-nom { left: calc(50% - 18.54vw); }
-    #I-nom { left: calc(50% - 10.25vw); }
-    #N-nom { left: calc(50% - 8.7vw); }
-    #T-nom { left: calc(50% - 1vw); }
-    #O-nom { left: calc(50% + 6vw); }
-    #N-bis-nom { left: calc(50% + 16.87vw); }
+    .O-nom-bulle {
+        height: 10.4vw;
+        width: 10.4vw;
+        margin-top: 2.7vw;
+        margin-right: 0.4vw
+    }
+
+    #S-nom {
+        left: calc(50% - 24.4vw);
+    }
+
+    #A-nom {
+        left: calc(50% - 18.54vw);
+    }
+
+    #I-nom {
+        left: calc(50% - 10.25vw);
+    }
+
+    #N-nom {
+        left: calc(50% - 8.7vw);
+    }
+
+    #T-nom {
+        left: calc(50% - 1vw);
+    }
+
+    #O-nom {
+        left: calc(50% + 6vw);
+    }
+
+    #N-bis-nom {
+        left: calc(50% + 16.87vw);
+    }
 
     .prenom-container span {
         color: var(--color-very-dark-blue);
         font-size: 12vw;
     }
-    .O-prenom-bulle {height: 10.4vw;width: 10.4vw; margin-top: 2.7vw; margin-right: 0.4vw}
-    #L-prenom { left: calc(50% - 13.15vw); }
-    #O-prenom { left: calc(50% - 7.45vw); }
-    #I-prenom { left: calc(50% + 3.4vw); }
-    #C-prenom { left: calc(50% + 5vw); }
+
+    .O-prenom-bulle {
+        height: 10.4vw;
+        width: 10.4vw;
+        margin-top: 2.7vw;
+        margin-right: 0.4vw
+    }
+
+    #L-prenom {
+        left: calc(50% - 13.15vw);
+    }
+
+    #O-prenom {
+        left: calc(50% - 7.45vw);
+    }
+
+    #I-prenom {
+        left: calc(50% + 3.4vw);
+    }
+
+    #C-prenom {
+        left: calc(50% + 5vw);
+    }
+
     /*FIN NOM PRENOM*/
-    
+
     section {
         height: 650px;
     }
+
     /*Section A propos de moi*/
     .title-section {
         font-family: var(--font-Moon-regular);
         font-size: 7.5vw;
-        color:var(--color-very-dark-blue);
+        color: var(--color-very-dark-blue);
         position: absolute;
         text-align: right;
         top: 45vw;
         right: -80vw;
-    
+
         letter-spacing: 0.2rem;
     }
+
     @keyframes floating {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
-        100% { transform: translateY(0px); }
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-7px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
     }
 
     .section-text-a-propos-de-moi-1 {
@@ -111,70 +168,137 @@
     .logo-reseau:active {
         transform: scale(0.95);
     }
-    
+
     .logo-banniere-1 {
         top: 72vh;
     }
+
     .logo-banniere-2 {
         top: 80vh;
     }
-    .logo-banniere-1, .logo-banniere-2 {
-        height: 50px; /* Reduced height */
+
+    .logo-banniere-1,
+    .logo-banniere-2 {
+        height: 50px;
+        /* Reduced height */
         display: flex;
         align-items: center;
     }
-    .wrapper-1, .wrapper-2 {
+
+    .wrapper-1,
+    .wrapper-2 {
         display: flex;
         align-items: center;
         height: 100%;
     }
 
-    .logo-left, .logo-right {
+    .logo-left,
+    .logo-right {
         height: 30px;
-        margin-right: 25px; 
+        margin-right: 25px;
         margin-top: 0;
     }
-    
-    .scroll-container-2, .scroll-container-4 {
-        right: 17px;
-        top:61vh;
-        transform: scale(0.7);
-    }
+
+    .scroll-container-2,
     .scroll-container-4 {
-        top:78vh;
-    }
-
-    
-    .scroll-container-2 a, .scroll-container-4 a {
-        padding-top: 60px; 
-        font-size: 0.7em; 
-    }
-    
-    .scroll-container-2 a span, .scroll-container-4 a span {
-        width: 20px; 
-        height: 20px; 
-        margin-left: -10px;
-    } 
-
-    .scroll-container-3, .scroll-container-5 {
-        right: 25px;
-        top:8vh;
+        right: 17px;
+        top: 61vh;
         transform: scale(0.7);
     }
-    
-    .scroll-container-3 a, .scroll-container-5 a {
-        padding-top: 60px; 
-        font-size: 0.7em; 
+
+    .scroll-container-4 {
+        top: 78vh;
     }
-    
-    .scroll-container-3 a span, .scroll-container-5 a span {
-        width: 20px; 
-        height: 20px; 
+
+
+    .scroll-container-2 a,
+    .scroll-container-4 a {
+        padding-top: 60px;
+        font-size: 0.7em;
+    }
+
+    .scroll-container-2 a span,
+    .scroll-container-4 a span {
+        width: 20px;
+        height: 20px;
+        margin-left: -10px;
+    }
+
+    .scroll-container-3,
+    .scroll-container-5 {
+        right: 25px;
+        top: 8vh;
+        transform: scale(0.7);
+    }
+
+    .scroll-container-3 a,
+    .scroll-container-5 a {
+        padding-top: 60px;
+        font-size: 0.7em;
+    }
+
+    .scroll-container-3 a span,
+    .scroll-container-5 a span {
+        width: 20px;
+        height: 20px;
         margin-left: -10px;
     }
 
     .gallery {
         width: 90vw;
-        top:32vh;
+        top: 32vh;
+    }
+
+    .fish-1,
+    .fish-2 {
+        width: 4vw;
+    }
+
+    .fish-1-grp-1,
+    .fish-2-grp-1,
+    .fish-3-grp-1 {
+        width: 2.5vw;
+    }
+
+    .fish-1-grp-1 {
+        top: 19vh;
+        left: -10vw;
+    }
+
+    .fish-2-grp-1 {
+        top: 21vh;
+        left: -12vw;
+    }
+
+    .fish-3-grp-1 {
+        top: 22.2vh;
+        left: -9.7vw;
+    }
+
+    .fish-1-grp-2,
+    .fish-2-grp-2,
+    .fish-3-grp-2,
+    .fish-4-grp-2 {
+        width: 2.3vw;
+    }
+
+    .fish-1-grp-2 {
+        top:73vh;
+        right: -10vw;
+    }
+    
+    .fish-2-grp-2 {
+        top:71.5vh;
+        right: -8.5vw;
+    }
+    
+    .fish-3-grp-2 {
+        top:74vh;
+        right: -5vw;
+    }
+    
+    .fish-4-grp-2 {
+        top:74.5vh;
+        right: -12.7vw;
     }
 }

@@ -37,7 +37,6 @@ function createTitleAnimation(titleElement) {
 
 const controller = new ScrollMagic.Controller();
 
-// Select all section titles and create scenes
 document.querySelectorAll('.title-section').forEach((title, index) => {
     const scene = new ScrollMagic.Scene({
         triggerElement: title.closest('.section-para'),

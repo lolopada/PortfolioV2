@@ -52,7 +52,6 @@ body.animations-paused *:not(#welcome-popup, #welcome-popup *) {
     --color-dark-grayish-cyan: #95acb2;
     --color-mostly-desaturated-dark-blue: #628ca6;
 
-    /*import Police Moon */
     --font-Moon-regular: 'Moon-Regular', sans-serif;
 }   
 
@@ -73,7 +72,7 @@ header {
 /*DEBUT NOM PRENOM*/
 .nom-container {
     width: 100%;
-    height: 1px; /* Add height to contain absolute elements */
+    height: 1px; 
 }
 
 .nom-container span {
@@ -95,7 +94,7 @@ header {
 .prenom-container {
     width: 100%;
     margin-top: 10vw;
-    height: 1px; /* Add height to contain absolute elements */
+    height: 1px; 
 }
 
 .prenom-container span {
@@ -142,7 +141,7 @@ header {
 
 main {
     width: 100%;
-    height: 10000px;
+    height: 6000px; /* A CHANGER*/
 }
 
 section {
@@ -164,10 +163,9 @@ section {
     right: -35vw;
     max-width: 100vw;
     letter-spacing: 0.2rem;
-    pointer-events: none; /* Add this to prevent interference */
+    pointer-events: none; 
 }
 
-/* Existing floating animation */
 @keyframes floating {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
@@ -179,7 +177,6 @@ section {
     animation: floating 3s infinite;
 }
 
-/* Add progressive delays for each letter */
 .title-section span:nth-child(1) { animation-delay: 0.0s; }
 .title-section span:nth-child(2) { animation-delay: 0.1s; }
 .title-section span:nth-child(3) { animation-delay: 0.2s; }
@@ -222,7 +219,7 @@ section {
 .section-reseau-logo div {
     display: flex;
     align-items: center;
-    margin-top: -0.5vw;  /* Ajout d'une marge négative pour remonter légèrement */
+    margin-top: -0.5vw;  
 }
 
 .logo-reseau {
@@ -295,8 +292,8 @@ A GARDER AU CAS OU
 .wrapper1, .wrapper-2 {
     display: flex;
     align-items: center;
-    white-space: nowrap; /* Empêche le retour à la ligne */
-    will-change: transform; /* Optimisation des performances */
+    white-space: nowrap; 
+    will-change: transform;
 }
 
 .logo-left, .logo-right {

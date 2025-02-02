@@ -1,10 +1,7 @@
-// Initialize controller
 const controller_scroll = new ScrollMagic.Controller();
 
-// Create timeline for scroll container animation
 const scrollAnimation = new TimelineLite();
 
-// Device detection
 function isMobilescroll() {
     return window.innerWidth <= 768;
 }
@@ -36,12 +33,11 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
-// Add smooth scroll functionality with offset
 document.querySelector('.scroll-container a').addEventListener('click', function(e) {
     e.preventDefault();
     const targetSection = document.querySelector(this.getAttribute('href'));
     if (targetSection) {
-        smoothScroll(targetSection.offsetTop, 2000); // 2000ms duration
+        smoothScroll(targetSection.offsetTop, 2000); // 2000ms
     }
 });
 
@@ -64,7 +60,6 @@ scrollAnimation
         }
     });
 
-// Create scene and add to controller
 const scrollScene = new ScrollMagic.Scene({
     triggerElement: "#first-section",
     triggerHook: 0.6,
@@ -83,24 +78,20 @@ const scrollScene = new ScrollMagic.Scene({
 // Initialize controller
 const controller_scroll2 = new ScrollMagic.Controller();
 
-// Create timeline for scroll container animation
 const scrollAnimation2 = new TimelineLite();
 
-// Add smooth scroll functionality for second container
 document.querySelector('.scroll-container-2 a').addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Get target section more specifically
     const targetSection = document.querySelector(this.getAttribute('href'));
     console.log('Target section:', targetSection);
     
     if (targetSection) {
-        // Calculate proper offset including any headers or fixed elements
-        const headerOffset = isMobilescroll() ? 170 : 200; // Adjust these values as needed
+        const headerOffset = isMobilescroll() ? 170 : 200; // Adjust 
         const elementPosition = targetSection.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        smoothScroll(offsetPosition, 2000); // 2000ms duration
+        smoothScroll(offsetPosition, 2000); // 2000ms
     } else {
         console.error('Target section not found');
     }
@@ -123,7 +114,6 @@ scrollAnimation2
         ease: Power1.easeInOut
     });
 
-// Create scene for second section
 const scrollScene2 = new ScrollMagic.Scene({
     triggerElement: ".section-1",
     triggerHook: isMobilescroll() ? -0.2 : 0,
@@ -144,17 +134,15 @@ const scrollAnimation3 = new TimelineLite();
 document.querySelector('.scroll-container-3 a').addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Get target section more specifically
     const targetSection = document.querySelector(this.getAttribute('href'));
     console.log('Target section:', targetSection);
     
     if (targetSection) {
-        // Calculate proper offset including any headers or fixed elements
-        const headerOffset = isMobilescroll() ? 2000 : 2000; // Adjust these values as needed
+        const headerOffset = isMobilescroll() ? 2000 : 2000; // Adjust
         const elementPosition = targetSection.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        smoothScroll(offsetPosition, 2000); // 2000ms duration
+        smoothScroll(offsetPosition, 2000); // 2000ms
     } else {
         console.error('Target section not found');
     }
@@ -192,27 +180,23 @@ const scrollScene3 = new ScrollMagic.Scene({
 
 //pour le scroll 4
 
-// Initialize controller
 const controller_scroll4 = new ScrollMagic.Controller();
 
-// Create timeline for scroll container animation
 const scrollAnimation4 = new TimelineLite();
 
 // Add smooth scroll functionality for second container
 document.querySelector('.scroll-container-4 a').addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Get target section more specifically
     const targetSection = document.querySelector(this.getAttribute('href'));
     console.log('Target section:', targetSection);
     
     if (targetSection) {
-        // Calculate proper offset including any headers or fixed elements
-        const headerOffset = isMobilescroll() ? 170 : 200; // Adjust these values as needed
+        const headerOffset = isMobilescroll() ? 170 : 200; // Adjust
         const elementPosition = targetSection.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        smoothScroll(offsetPosition, 2000); // 2000ms duration
+        smoothScroll(offsetPosition, 2000); // 2000ms 
     } else {
         console.error('Target section not found');
     }
@@ -258,12 +242,11 @@ document.querySelector('.scroll-container-5 a').addEventListener('click', functi
     console.log('Target section:', targetSection);
     
     if (targetSection) {
-        // Calculate proper offset including any headers or fixed elements
-        const headerOffset = isMobilescroll() ? 1400 : 2000; // Adjust these values as needed
+        const headerOffset = isMobilescroll() ? 1400 : 2000; // Adjust
         const elementPosition = targetSection.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        smoothScroll(offsetPosition, 2000); // 2000ms duration
+        smoothScroll(offsetPosition, 2000); // 2000ms
     } else {
         console.error('Target section not found');
     }

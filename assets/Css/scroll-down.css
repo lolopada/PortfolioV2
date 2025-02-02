@@ -234,7 +234,5 @@
 
 
 .flip-for-word-scroll {
-    /* ...existing code... */
-    transform: rotate(180deg); /* Ensure 'Monter' text is upright */
-    /* ...existing code... */
+    transform: rotate(180deg); 
 }

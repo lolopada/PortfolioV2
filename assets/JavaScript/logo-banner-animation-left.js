@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // 2. Initial setup
+    // setup
     let speed = 0.3;
     let currentOffset = 0;
     let totalWidth = 0;
 
-    // 3. Calculate total width and clone logos
+    // Calculate total width and clone logos
     const logos = Array.from(wrapper.children);
     const wrapperWidth = wrapper.offsetWidth;
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return total + width;
     }, 0);
 
-    // 4. Clone logos until width requirement met
+    // Clone logos until width requirement met
     while (totalWidth < wrapperWidth * 2) {
         logos.forEach(logo => {
             const clone = logo.cloneNode(true);
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Animation function
+    // Animation function
     function animate() {
         currentOffset -= speed;
         wrapper.style.transform = `translateX(${currentOffset}px)`;
@@ -54,6 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animate);
     }
 
-    // 6. Start animation
+    // Start animation
     animate();
 });

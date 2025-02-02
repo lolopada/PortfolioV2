@@ -207,7 +207,7 @@
     }
 
     .scroll-container-4 {
-        top: 78vh;
+        top: 80vh;
     }
 
 
@@ -242,11 +242,6 @@
         width: 20px;
         height: 20px;
         margin-left: -10px;
-    }
-
-    .gallery {
-        width: 90vw;
-        top: 32vh;
     }
 
     .fish-1,
@@ -301,4 +296,25 @@
         top:74.5vh;
         right: -12.7vw;
     }
+
+    .gallery {
+        width: 100vw;
+        top: 32vh;
+        left: 0;
+    }
+
+    .gallery-cell {
+        height: 305px;
+    }
+
+    .flickity-page-dots {
+        bottom: 10px;
+    }
+
+    .gallery-cell div {
+        width: 90%;
+    }
+    .flickity-page-dots {
+        display: none;
+      }
 }

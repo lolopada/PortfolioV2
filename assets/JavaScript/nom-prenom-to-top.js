@@ -237,9 +237,9 @@ const controller1 = new ScrollMagic.Controller();
 
 const scene1 = new ScrollMagic.Scene({
     triggerElement: ".start-nom-to-top-animation",
-    duration: 600,           // Use percentage-based duration
-    triggerHook: 0.5,          // Trigger in middle of viewport
-    reverse: true              // Allow reverse animation
+    duration: 600,
+    triggerHook: 0.5,
+    reverse: true
 })
 .setTween(tween2)
 .addTo(controller1);

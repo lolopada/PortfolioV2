@@ -45,15 +45,14 @@ tween3
         opacity: move_text_path.values[1].opacity,
         ease: Power1.easeOut
     })
-    // Start logo animation in parallel with text
     .to(logoElement1, 0.8, {
         marginLeft: move_logo_1_path.values[0].marginLeft,
         ease: Power1.easeOut
-    }, "-=1.2") // Offset to start with text animation
+    }, "-=1.2") 
     .to(logoElement2, 0.8, {
         marginLeft: move_logo_2_path.values[0].marginLeft,
         ease: Power1.easeOut
-    }, "-=1.2") // Offset to start with text animation
+    }, "-=1.2")
     .to(textElement, 1, {
         left: move_text_path.values[2].left,
         opacity: move_text_path.values[2].opacity,
@@ -62,11 +61,11 @@ tween3
     .to(logoElement1, 1, {
         marginLeft: move_logo_1_path.values[1].marginLeft,
         ease: Power1.easeInOut
-    }, "-=1") // Sync with text animation
+    }, "-=1") 
     .to(logoElement2, 1, {
         marginLeft: move_logo_2_path.values[1].marginLeft,
         ease: Power1.easeInOut
-    }, "-=1") // Sync with text animation
+    }, "-=1")
     .to(textElement, 0.8, {
         left: move_text_path.values[3].left,
         opacity: move_text_path.values[3].opacity,
@@ -81,7 +80,7 @@ tween3
     .to(logoElement2, 0.8, {
         marginLeft: move_logo_2_path.values[3].marginLeft,
         ease: Power1.easeIn
-    }, "-=0.8"); // Sync final animation
+    }, "-=0.8"); 
 
 const controller2 = new ScrollMagic.Controller();
 

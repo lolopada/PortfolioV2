@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 2px 10px var(--color-very-dark-blue);
+    box-shadow: 0 2px 13px #051f3479;
 }
 
 .gallery-cell div p {

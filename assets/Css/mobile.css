@@ -278,24 +278,68 @@
     }
 
     .fish-1-grp-2 {
-        top:73vh;
+        top: 73vh;
         right: -10vw;
     }
-    
+
     .fish-2-grp-2 {
-        top:71.5vh;
+        top: 71.5vh;
         right: -8.5vw;
     }
-    
+
     .fish-3-grp-2 {
-        top:74vh;
+        top: 74vh;
         right: -5vw;
     }
-    
+
     .fish-4-grp-2 {
-        top:74.5vh;
+        top: 74.5vh;
         right: -12.7vw;
     }
+
+    .fish-3 {
+        width: 5vw;
+        opacity: 0.4;
+    }
+
+    .fish-4 {
+        width: 5vw;
+        opacity: 0.5;
+        z-index: -10;
+        top: 87vh;
+    }
+
+    .fish-1-grp-3,
+    .fish-2-grp-3 {
+        width: 3.9vw;
+    }
+
+
+    .fish-1-grp-4,
+    .fish-2-grp-4,
+    .fish-3-grp-4 {
+        width: 3.3vw;
+    }
+
+    .fish-1-grp-4 {
+        top: 60vh;
+        right: -11vw;
+    }
+
+    .fish-2-grp-4 {
+        top: 57.6vh;
+        right: -9.9vw;
+    }
+
+    .fish-3-grp-4 {
+        top: 59vh;
+        right: -8vw;
+    }
+
+
+
+
+
 
     .gallery {
         width: 100vw;
@@ -314,7 +358,8 @@
     .gallery-cell div {
         width: 90%;
     }
+
     .flickity-page-dots {
         display: none;
-      }
+    }
 }

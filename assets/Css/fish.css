@@ -103,3 +103,70 @@
         transform: translateX(-120vw);
     }
 }
+
+.fish-3{
+    position: absolute;
+    width: 2vw;
+    opacity: 0.4;
+    z-index: -10;
+    animation: moveFishToRight 40s linear infinite;
+    animation-delay: 1s;
+    top:90vh;
+    left: -10vw;
+}
+
+.fish-4 {
+    position: absolute;
+    width: 2vw;
+    opacity: 0.6;
+    z-index: -10;
+    animation: moveFishToLeft 65s linear infinite;
+    animation-delay: 7s;
+    top:93vh;
+    right: -10vw;
+}
+
+.fish-1-grp-3,
+.fish-2-grp-3 {
+    position: absolute;
+    width: 1.9vw;
+    opacity: 0.7;
+    z-index: -10;
+    animation: moveFishToRight 54s linear infinite;
+    animation-delay: 4s;
+}
+
+.fish-1-grp-3 {
+    top: 34vh;
+    left: -11vw;
+}
+.fish-2-grp-3 {
+    top: 36vh;
+    left: -13vw;
+}
+
+.fish-1-grp-4,
+.fish-2-grp-4,
+.fish-3-grp-4 {
+    position: absolute;
+    width: 1.3vw;
+    opacity: 0.65;
+    z-index: -10;
+    animation: moveFishToLeft 47s linear infinite;
+    animation-delay: 0s;
+}
+
+.fish-1-grp-4 {
+    top:60vh;
+    right: -11vw;
+}
+
+.fish-2-grp-4 {
+    top:56vh;
+    right: -9.5vw;
+}
+
+.fish-3-grp-4 {
+    top:59vh;
+    right: -8vw;
+}

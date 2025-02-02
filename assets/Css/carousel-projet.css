@@ -10,14 +10,14 @@
 .gallery {
     position: absolute;
     width: 70vw;
-    top:45vh;
+    top:39vh;
     left: 4vw;
 }
 
 
 .gallery-cell div {
-    height: 90%;
-    width: 80%;
+    height: 40vh;
+    width: 40vw;
     background-color: var(--color-light-grayish-cyan);
     border-radius: 1rem;
     display: flex;

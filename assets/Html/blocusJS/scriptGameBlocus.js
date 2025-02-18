@@ -1,0 +1,217 @@
+const gridElement = document.querySelector('.grid');
+const errorMessageElement = document.querySelector('.error-message');
+let currentPlayer = 1;
+const gridSize = 5;
+const grid = Array.from({ length: gridSize }, () => Array(gridSize).fill(null));
+let gamePhase = 'placement'; // 'placement', 'movement', 'wall'
+let playerPositions = {
+  1: null,
+  2: null
+};
+
+function isAdjacent(row1, col1, row2, col2) {
+  return Math.abs(row1 - row2) <= 1 && Math.abs(col1 - col2) <= 1;
+}
+
+function getValidMoves(row, col) {
+  const moves = [];
+  for (let i = -1; i <= 1; i++) {
+    for (let j = -1; j <= 1; j++) {
+      const newRow = row + i;
+      const newCol = col + j;
+      if (
+        newRow >= 0 && newRow < gridSize &&
+        newCol >= 0 && newCol < gridSize &&
+        grid[newRow][newCol] !== 'wall' &&
+        !(grid[newRow][newCol] === 1 || grid[newRow][newCol] === 2)
+      ) {
+        moves.push([newRow, newCol]);
+      }
+    }
+  }
+  return moves;
+}
+
+// Add this new function
+function isPlayerBlocked(playerNum) {
+  const pos = playerPositions[playerNum];
+  if (!pos) return false;
+  return getValidMoves(pos[0], pos[1]).length === 0;
+}
+
+// Replace existing checkWinner function
+function checkWinner() {
+  // Vérifier si l'un des joueurs est bloqué
+  if (isPlayerBlocked(1)) {
+    const winner = 2;
+    document.querySelector('.winner-message').style.display = 'block';
+    document.querySelector('.winner-text').textContent = `Joueur ${winner} a gagné!`;
+    return true;
+  }
+  if (isPlayerBlocked(2)) {
+    const winner = 1;
+    document.querySelector('.winner-message').style.display = 'block';
+    document.querySelector('.winner-text').textContent = `Joueur ${winner} a gagné!`;
+    return true;
+  }
+  return false;
+}
+
+function createGrid() {
+  gridElement.innerHTML = '';
+  for (let row = 0; row < gridSize; row++) {
+    for (let col = 0; col < gridSize; col++) {
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      cell.dataset.row = row;
+      cell.dataset.col = col;
+
+      if (grid[row][col] === 1 || grid[row][col] === 2) {
+        const circle = document.createElement('div');
+        circle.classList.add('circle', grid[row][col] === 1 ? 'blue' : 'red');
+        cell.appendChild(circle);
+      } else if (grid[row][col] === 'wall') {
+        cell.classList.add('wall');
+      }
+
+      cell.addEventListener('click', () => handleCellClick(row, col));
+      gridElement.appendChild(cell);
+    }
+  }
+  updatePhaseIndicator();
+}
+
+function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+async function makeBotMove() {
+  if (gamePhase === 'placement') {
+    // Find random empty cell for initial placement
+    const emptyCells = [];
+    for (let row = 0; row < gridSize; row++) {
+      for (let col = 0; col < gridSize; col++) {
+        if (!grid[row][col]) {
+          emptyCells.push([row, col]);
+        }
+      }
+    }
+    const [row, col] = getRandomElement(emptyCells);
+    await new Promise(resolve => setTimeout(resolve, 500));
+    handleCellClick(row, col);
+  } else if (gamePhase === 'movement') {
+    const playerPos = playerPositions[2];
+    const validMoves = getValidMoves(playerPos[0], playerPos[1]);
+    const [row, col] = getRandomElement(validMoves);
+    await new Promise(resolve => setTimeout(resolve, 500));
+    handleCellClick(row, col);
+  } else if (gamePhase === 'wall') {
+    const emptyCells = [];
+    for (let row = 0; row < gridSize; row++) {
+      for (let col = 0; col < gridSize; col++) {
+        if (!grid[row][col]) {
+          emptyCells.push([row, col]);
+        }
+      }
+    }
+    const [row, col] = getRandomElement(emptyCells);
+    await new Promise(resolve => setTimeout(resolve, 500));
+    handleCellClick(row, col);
+  }
+}
+
+function handleCellClick(row, col) {
+  if (grid[row][col] === 'wall') {
+    showError('Cette case contient déjà un mur !');
+    return;
+  }
+
+  if (gamePhase === 'placement') {
+    if (grid[row][col]) {
+      showError('Cette case est déjà occupée !');
+      return;
+    }
+    grid[row][col] = currentPlayer;
+    playerPositions[currentPlayer] = [row, col];
+    
+    if (playerPositions[1] && playerPositions[2]) {
+      gamePhase = 'movement';
+    }
+    currentPlayer = currentPlayer === 1 ? 2 : 1;
+    createGrid();
+    updatePhaseIndicator();
+    if (currentPlayer === 2) {
+      makeBotMove();
+    }
+  } else if (gamePhase === 'movement') {
+    if (checkWinner()) return;
+    
+    const playerPos = playerPositions[currentPlayer];
+    if (!isAdjacent(playerPos[0], playerPos[1], row, col)) {
+      showError('Vous devez vous déplacer sur une case adjacente !');
+      return;
+    }
+    if (grid[row][col] === 1 || grid[row][col] === 2) {
+      showError('Cette case est déjà occupée !');
+      return;
+    }
+    grid[playerPos[0]][playerPos[1]] = null;
+    grid[row][col] = currentPlayer;
+    playerPositions[currentPlayer] = [row, col];
+    gamePhase = 'wall';
+    createGrid();
+    updatePhaseIndicator();
+    if (currentPlayer === 2) {
+      makeBotMove();
+    }
+  } else if (gamePhase === 'wall') {
+    if (grid[row][col]) {
+      showError('Cette case est déjà occupée !');
+      return;
+    }
+    grid[row][col] = 'wall';
+    if (!checkWinner()) {
+      gamePhase = 'movement';
+      currentPlayer = currentPlayer === 1 ? 2 : 1;
+      if (currentPlayer === 2) {
+        makeBotMove();
+      }
+    }
+    createGrid();
+    updatePhaseIndicator();
+  }
+  
+}
+
+function showError(message) {
+  const errorElement = document.querySelector('.error-message');
+  errorElement.textContent = message;
+  errorElement.classList.add('visible');
+  
+  setTimeout(() => {
+    errorElement.classList.remove('visible');
+  }, 3000);
+}
+
+function updatePhaseIndicator() {
+  const phaseIndicatorElement = document.querySelector('.phase-indicator');
+  
+  if (gamePhase === 'placement') {
+    phaseIndicatorElement.textContent = "Placez votre pion sur la grille";
+  } else if (currentPlayer === 2) {
+    phaseIndicatorElement.textContent = "Joueur 2 joue...";
+  } else {
+    if (gamePhase === 'movement') {
+      phaseIndicatorElement.textContent = "Joueur 1 : Déplacez votre pion";
+    } else if (gamePhase === 'wall') {
+      phaseIndicatorElement.textContent = "Joueur 1 : Placez un mur";
+    }
+  }
+}
+
+document.querySelector('.restart-btn').addEventListener('click', () => {
+  location.reload();
+});
+
+createGrid();
+updatePhaseIndicator();

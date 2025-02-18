@@ -73,12 +73,14 @@ header {
 .nom-container {
     width: 100%;
     height: 1px; 
+    z-index: -10;
 }
 
 .nom-container span {
     color: var(--color-very-dark-blue);
     font-size: 7vw;
     position: absolute;
+    
 }
 
 #S-nom { left: calc(50% - 15.1vw); }
@@ -95,6 +97,7 @@ header {
     width: 100%;
     margin-top: 10vw;
     height: 1px; 
+    z-index: -10;
 }
 
 .prenom-container span {

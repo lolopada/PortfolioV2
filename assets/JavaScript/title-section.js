@@ -5,8 +5,8 @@ function createTitleAnimation(titleElement) {
         curviness: 0,
         autoRotate: false,
         values: [
-            { right: isMobile2 ? "7vw" : "8vw", top: isMobile2 ? "42vw" : "5vw", opacity:1 },
-            { right: isMobile2 ? "7vw" : "8vw", top: isMobile2 ? "42vw" : "5vw", opacity:1  },
+            { right: isMobile2 ? "7vw" : "8vw", top: isMobile2 ? "20vh" : "5vw", opacity:1 },
+            { right: isMobile2 ? "7vw" : "8vw", top: isMobile2 ? "20vh" : "5vw", opacity:1  },
             { right: isMobile2 ? "-70vw" : "15vw", top: isMobile2 ? "-10vw" : "-10vw", opacity:0  }
         ]
     };

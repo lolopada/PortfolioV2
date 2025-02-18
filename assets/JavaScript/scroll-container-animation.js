@@ -36,8 +36,16 @@ function smoothScroll(target, duration) {
 document.querySelector('.scroll-container a').addEventListener('click', function(e) {
     e.preventDefault();
     const targetSection = document.querySelector(this.getAttribute('href'));
+    console.log('Target section:', targetSection);
+    
     if (targetSection) {
-        smoothScroll(targetSection.offsetTop, 2000); // 2000ms
+        const headerOffset = isMobilescroll() ? 430 : 430; // Adjust 
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        smoothScroll(offsetPosition, 2000); // 2000ms
+    } else {
+        console.error('Target section not found');
     }
 });
 

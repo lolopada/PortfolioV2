@@ -106,13 +106,13 @@
     /*FIN NOM PRENOM*/
 
     section {
-        height: 650px;
+        height: 100vh;
     }
 
     /*Section A propos de moi*/
     .title-section {
         font-family: var(--font-Moon-regular);
-        font-size: 7.5vw;
+        font-size: 7.1vw;
         color: var(--color-very-dark-blue);
         position: absolute;
         text-align: right;
@@ -137,8 +137,8 @@
     }
 
     .section-text-a-propos-de-moi-1 {
-        font-size: 4.7vw;
-        width: 93%;
+        font-size: 3.8vw;
+        width: 90%;
     }
 
     /* Social Media Logo */
@@ -202,7 +202,7 @@
     .scroll-container-2,
     .scroll-container-4 {
         right: 17px;
-        top: 61vh;
+        top: 57vh;
         transform: scale(0.7);
     }
 
@@ -339,27 +339,4 @@
 
 
 
-
-
-    .gallery {
-        width: 100vw;
-        top: 32vh;
-        left: 0;
-    }
-
-    .gallery-cell {
-        height: 305px;
-    }
-
-    .flickity-page-dots {
-        bottom: 10px;
-    }
-
-    .gallery-cell div {
-        width: 90%;
-    }
-
-    .flickity-page-dots {
-        display: none;
-    }
 }

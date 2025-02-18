@@ -33,7 +33,7 @@
     margin-top: 1.5vw;
     font-family: 'Helvetica Neue', sans-serif;
     color: var(--color-very-dark-blue);
-    font-size: 0.8vw;
+    font-size: 1.6vw;
 }
 
 .title-projet {
@@ -46,15 +46,109 @@
 }
 
 .image-gallery-projet {
-    margin: 1vw;
-    height: 19vh;
-    border-radius: 0.5rem;
-    
+    margin: 0.5vw;
+    height: 19vh; 
+    width: 70%; 
+    border-radius: 1rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
+
+.title-projet {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: var(--color-very-dark-blue);
+    font-size: 1.4vw;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.gallery-cell div p {
+    overflow: hidden;
+    margin: 0 2vw;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: var(--color-very-dark-blue);
+    font-size: 0.9vw;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.9;
+}
+
+
+.gallery-arrow {
+    position: absolute;
+    top: 4.5vw;
+    right: 5vw;
+    width: 3vw;
+    height: 3vw;
+    background-color: var(--color-very-dark-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1010;
+    text-decoration: none;
+}
+
+.gallery-arrow:hover {
+    transform: translateY(-2px);
+}
+
+.gallery-arrow::before {
+    content: "➚";
+    color: white;
+    font-size: 2.6vw;
+}
+
+
 @media screen and (max-width: 900px) {
     .gallery-cell div p {
-        font-size: 0.9rem;
-        margin: 0.8rem;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 8px 0;
+        }
+
+    .gallery {
+        top:23vh;
+        width: 100vw;
+        left: 0;
+        
+    }
+    .gallery-cell {
+        height: 305px;
+    }
+
+    .gallery-arrow {
+        width: 35px; 
+        height: 35px;
+        top: 70px;
+        right: 25px;
+    }
+
+    .gallery-arrow::before {
+        font-size: 25px;  
+    }
+
+    .flickity-viewport {
+        margin-top: 10vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow-y: hidden;
+    }
+    
+    .flickity-page-dots {
+        bottom: 10px;
+    }
+
+    .gallery-cell div {
+        width: 90%;
+    }
+
+    .flickity-page-dots {
+        display: none;
     }
 
     .title-projet {

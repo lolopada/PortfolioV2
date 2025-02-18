@@ -4,7 +4,7 @@
     top: 80%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 50;
+    z-index: 1000;
 }
 
 .scroll-container a {
@@ -103,7 +103,7 @@
     right: 111px;
     top:76vh;
     text-align: center;
-    z-index: 50;
+    z-index: 1000;
     animation: floatScrollDown 3s ease-in-out infinite;
 }
 
@@ -184,7 +184,7 @@
     right: 125px;
     top:55vh;
     text-align: center;
-    z-index: 50;
+    z-index: 1000;
     animation: floatScrollUp 3s ease-in-out infinite;
 }
 

@@ -1,13 +1,41 @@
 const gridElement = document.querySelector('.grid');
 const errorMessageElement = document.querySelector('.error-message');
 let currentPlayer = 1;
-const gridSize = 5;
-const grid = Array.from({ length: gridSize }, () => Array(gridSize).fill(null));
-let gamePhase = 'placement'; // 'placement', 'movement', 'wall'
+let gridSize; // La taille sera définie par le choix du joueur
+let grid;
+let gamePhase = 'placement';
 let playerPositions = {
   1: null,
   2: null
 };
+
+function initGame(size) {
+  gridSize = size;
+  grid = Array.from({ length: gridSize }, () => Array(gridSize).fill(null));
+  createGrid();
+  updatePhaseIndicator();
+}
+
+function showGridSizeDialog() {
+  const dialog = document.createElement('div');
+  dialog.innerHTML = `
+    <div class="grid-size-dialog">
+      <h2>Choisissez la taille de la grille</h2>
+      <div class="size-options">
+        <button onclick="selectGridSize(5)">5 x 5</button>
+        <button onclick="selectGridSize(7)">7 x 7</button>
+        <button onclick="selectGridSize(9)">9 x 9</button>
+        <button onclick="selectGridSize(12)">12 x 12</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(dialog);
+}
+
+function selectGridSize(size) {
+  document.querySelector('.grid-size-dialog').remove();
+  initGame(size);
+}
 
 function isAdjacent(row1, col1, row2, col2) {
   return Math.abs(row1 - row2) <= 1 && Math.abs(col1 - col2) <= 1;
@@ -57,8 +85,13 @@ function checkWinner() {
   return false;
 }
 
+// Modifier la fonction createGrid() pour utiliser des tailles relatives
 function createGrid() {
   gridElement.innerHTML = '';
+  const cellSize = Math.min(60, 400 / gridSize); // Ajuste la taille des cellules en fonction de la taille de la grille
+  gridElement.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
+  gridElement.style.gridTemplateRows = `repeat(${gridSize}, ${cellSize}px)`;
+  
   for (let row = 0; row < gridSize; row++) {
     for (let col = 0; col < gridSize; col++) {
       const cell = document.createElement('div');
@@ -213,5 +246,5 @@ document.querySelector('.restart-btn').addEventListener('click', () => {
   location.reload();
 });
 
-createGrid();
-updatePhaseIndicator();
+// Ajouter au début du fichier avant createGrid()
+showGridSizeDialog();

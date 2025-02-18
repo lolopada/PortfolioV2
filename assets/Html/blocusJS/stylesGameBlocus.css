@@ -55,8 +55,8 @@ html, body {
 }
 
 .circle {
-  width: 48px;
-  height: 48px;
+  width: 75%;
+  height: 75%;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -222,19 +222,9 @@ h1 {
 @media screen and (max-width: 800px) {
   .container {
     top:50%;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.7);
   }
   
-  .grid {
-    grid-template-columns: repeat(5, 50px);
-    grid-template-rows: repeat(5, 50px);
-    gap: 5px;
-  }
-  
-  .circle {
-    width: 35px;
-    height: 35px;
-  }
 }
 
 .back-btn {
@@ -261,4 +251,59 @@ h1 {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-size-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  width: min(90%, 500px); /* Utilise la plus petite valeur entre 90% et 500px */
+  box-sizing: border-box; /* Inclut padding et border dans la largeur */
+  margin: auto; /* Centre horizontalement */
+}
+
+@media screen and (max-width: 480px) {
+  .grid-size-dialog {
+    width: min(95%, 500px); /* Légèrement plus large sur mobile */
+    padding: 1.5rem;
+  }
+}
+
+.grid-size-dialog h2 {
+  color: #027495;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Assure que les options prennent toute la largeur */
+  padding: 0; /* Supprime le padding qui peut décaler le centrage */
+}
+
+.size-options button {
+  background: #027495;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.size-options button:hover {
+  background: #01a9c1;
+  transform: scale(1.05);
 }

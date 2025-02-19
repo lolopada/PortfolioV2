@@ -1,3 +1,4 @@
+// Sélectionne les éléments de la grille et du message d'erreur
 const gridElement = document.querySelector('.grid');
 const errorMessageElement = document.querySelector('.error-message');
 let currentPlayer = 1;
@@ -9,6 +10,7 @@ let playerPositions = {
   2: null
 };
 
+// Initialise le jeu avec la taille de grille spécifiée
 function initGame(size) {
   gridSize = size;
   grid = Array.from({ length: gridSize }, () => Array(gridSize).fill(null));
@@ -16,6 +18,7 @@ function initGame(size) {
   updatePhaseIndicator();
 }
 
+// Affiche une boîte de dialogue pour choisir la taille de la grille
 function showGridSizeDialog() {
   const dialog = document.createElement('div');
   dialog.innerHTML = `
@@ -32,15 +35,18 @@ function showGridSizeDialog() {
   document.body.appendChild(dialog);
 }
 
+// Sélectionne la taille de la grille et initialise le jeu
 function selectGridSize(size) {
   document.querySelector('.grid-size-dialog').remove();
   initGame(size);
 }
 
+// Vérifie si deux cellules sont adjacentes
 function isAdjacent(row1, col1, row2, col2) {
   return Math.abs(row1 - row2) <= 1 && Math.abs(col1 - col2) <= 1;
 }
 
+// Obtient les mouvements valides pour une cellule donnée
 function getValidMoves(row, col) {
   const moves = [];
   for (let i = -1; i <= 1; i++) {
@@ -60,16 +66,15 @@ function getValidMoves(row, col) {
   return moves;
 }
 
-// Add this new function
+// Vérifie si un joueur est bloqué
 function isPlayerBlocked(playerNum) {
   const pos = playerPositions[playerNum];
   if (!pos) return false;
   return getValidMoves(pos[0], pos[1]).length === 0;
 }
 
-// Replace existing checkWinner function
+// Vérifie si un joueur a gagné
 function checkWinner() {
-  // Vérifier si l'un des joueurs est bloqué
   if (isPlayerBlocked(1)) {
     const winner = 2;
     document.querySelector('.winner-message').style.display = 'block';
@@ -85,7 +90,7 @@ function checkWinner() {
   return false;
 }
 
-// Modifier la fonction createGrid() pour utiliser des tailles relatives
+// Crée la grille de jeu
 function createGrid() {
   gridElement.innerHTML = '';
   const cellSize = Math.min(60, 400 / gridSize); // Ajuste la taille des cellules en fonction de la taille de la grille
@@ -114,13 +119,14 @@ function createGrid() {
   updatePhaseIndicator();
 }
 
+// Obtient un élément aléatoire d'un tableau
 function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
+// Effectue un mouvement pour le bot
 async function makeBotMove() {
   if (gamePhase === 'placement') {
-    // Find random empty cell for initial placement
     const emptyCells = [];
     for (let row = 0; row < gridSize; row++) {
       for (let col = 0; col < gridSize; col++) {
@@ -153,6 +159,7 @@ async function makeBotMove() {
   }
 }
 
+// Gère le clic sur une cellule
 function handleCellClick(row, col) {
   if (grid[row][col] === 'wall') {
     showError('Cette case contient déjà un mur !');
@@ -213,9 +220,9 @@ function handleCellClick(row, col) {
     createGrid();
     updatePhaseIndicator();
   }
-  
 }
 
+// Affiche un message d'erreur
 function showError(message) {
   const errorElement = document.querySelector('.error-message');
   errorElement.textContent = message;
@@ -226,6 +233,7 @@ function showError(message) {
   }, 3000);
 }
 
+// Met à jour l'indicateur de phase de jeu
 function updatePhaseIndicator() {
   const phaseIndicatorElement = document.querySelector('.phase-indicator');
   
@@ -242,9 +250,10 @@ function updatePhaseIndicator() {
   }
 }
 
+// Redémarre le jeu
 document.querySelector('.restart-btn').addEventListener('click', () => {
   location.reload();
 });
 
-// Ajouter au début du fichier avant createGrid()
+// Affiche la boîte de dialogue pour choisir la taille de la grille au début
 showGridSizeDialog();

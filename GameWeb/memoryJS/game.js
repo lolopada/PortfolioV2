@@ -13,8 +13,8 @@ let canFlip = true;
 // Déclarez une variable globale pour le nombre de paires (entre 2 et 25 par exemple)
 let numPairs = 8; // valeur par défaut
 
+// Crée le plateau de jeu avec les cartes mélangées
 function createBoard() {
-    // Choisit aléatoirement numPairs symboles uniques à partir du tableau complet
     const symbolsCopy = [...symbols];
     const selectedSymbols = [];
     for (let i = 0; i < numPairs; i++) {
@@ -45,6 +45,7 @@ function createBoard() {
     });
 }
 
+// Gère le retournement des cartes
 function flipCard() {
     if (!canFlip || flippedCards.includes(this) || this.classList.contains('flipped')) return;
 
@@ -58,12 +59,10 @@ function flipCard() {
 
         if (flippedCards[0].dataset.symbol === flippedCards[1].dataset.symbol) {
             pairsFound++;
-            // Affiche "pairsFound/numPairs"
             pairsDisplay.textContent = `${pairsFound}/${numPairs}`;
             flippedCards = [];
             canFlip = true;
 
-            // Vérifie la victoire lorsque le nombre de paires trouvées atteint numPairs
             if (pairsFound === numPairs) {
                 setTimeout(showWinPopup, 500);
             }
@@ -79,8 +78,8 @@ function flipCard() {
     }
 }
 
+// Affiche un popup de victoire
 function showWinPopup() {
-    // Supprime un éventuel popup existant
     const existingPopup = document.querySelector('.popup');
     if (existingPopup) existingPopup.remove();
 
@@ -102,8 +101,8 @@ function showWinPopup() {
     });
 }
 
+// Affiche un popup pour choisir le nombre de paires
 function showMemorySetupPopup() {
-    // Supprime un éventuel popup existant
     const existingPopup = document.querySelector('.popup');
     if (existingPopup) existingPopup.remove();
 
@@ -135,6 +134,7 @@ function showMemorySetupPopup() {
     });
 }
 
+// Affiche le popup de configuration au chargement de la page
 window.addEventListener('load', showMemorySetupPopup);
 
 // Supprimez ou commentez l'appel direct à createBoard() existant

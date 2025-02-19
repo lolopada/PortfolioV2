@@ -1,28 +1,18 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
   background-color: #2e2e2e;
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-html, body {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
+  align-items: flex-start;
+  overflow-y: auto; 
 }
 
 .container {
   position: fixed;
-  top: 40%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   text-align: center;
   width: fit-content;
   padding: 2rem;
@@ -219,13 +209,14 @@ h1 {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
   .container {
-    top:50%;
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -10%) scale(0.65);
+    padding: 1rem; 
+    padding-top: 0;
   }
-  
 }
+
 
 .back-btn {
   position: fixed;
@@ -264,14 +255,14 @@ h1 {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   z-index: 1000;
-  width: min(90%, 500px); /* Utilise la plus petite valeur entre 90% et 500px */
-  box-sizing: border-box; /* Inclut padding et border dans la largeur */
-  margin: auto; /* Centre horizontalement */
+  width: min(90%, 500px); 
+  box-sizing: border-box; 
+  margin: auto; 
 }
 
 @media screen and (max-width: 480px) {
   .grid-size-dialog {
-    width: min(95%, 500px); /* Légèrement plus large sur mobile */
+    width: min(95%, 500px); 
     padding: 1.5rem;
   }
 }
@@ -288,8 +279,8 @@ h1 {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Assure que les options prennent toute la largeur */
-  padding: 0; /* Supprime le padding qui peut décaler le centrage */
+  width: 100%; 
+  padding: 0;
 }
 
 .size-options button {

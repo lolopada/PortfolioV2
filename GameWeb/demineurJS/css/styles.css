@@ -16,7 +16,6 @@ body {
     overflow: hidden;
 }
 
-/* Modifier le conteneur principal */
 .container {
     position: fixed;
     top: 50%;
@@ -32,18 +31,17 @@ body {
     backdrop-filter: blur(4px);
     max-height: 90vh;
     overflow-y: auto;
-    /* Ajout de padding pour le scroll */
     padding-bottom: 2rem;
 }
 
 h1 {
     color: var(--color-white);
-    font-size: 2.5rem;  /* Réduction de la taille du titre */
+    font-size: 2.5rem;  
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1rem;  /* Réduction de la marge */
+    margin-bottom: 1rem; 
 }
 
-/* Modifier le plateau de jeu */
+
 #game-board {
     display: grid;
     gap: 8px;
@@ -52,19 +50,17 @@ h1 {
     border-radius: 8px;
     width: fit-content;
     margin: 0;
-    /* Assurer que le contenu reste visible */
-    max-height: 90vh;
-    max-width: calc(90vw - 2px); /* Ajout d'une largeur maximale */
-    overflow: auto; /* Permet le défilement dans les deux directions */
-    /* Style du scroll */
-    scrollbar-width: normal; /* Change de 'thin' à 'normal' */
+    max-height: 1000px;
+    max-width: calc(90vw - 2px); 
+    overflow-x: auto; 
+    scrollbar-width: normal;
     scrollbar-color: var(--color-secondary) rgba(255, 255, 255, 0.1);
 }
 
-/* Style pour les barres de défilement Webkit (Chrome, Safari, etc.) */
+
 #game-board::-webkit-scrollbar {
-    width: 12px; /* Largeur augmentée */
-    height: 12px; /* Hauteur pour la barre horizontale */
+    width: 12px; 
+    height: 12px;
 }
 
 #game-board::-webkit-scrollbar-track {
@@ -82,14 +78,13 @@ h1 {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Ajuster la taille des cellules */
 .cell {
     width: 35px;
     height: 35px;
-    margin: 0; /* Suppression de la marge individuelle des cellules car nous utilisons gap */
+    margin: 0; 
     background: rgba(255, 255, 255, 0.9);
     
-    border-radius: 6px; /* Réduction du border-radius */
+    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,10 +92,10 @@ h1 {
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    font-size: 1em; /* Réduction de la taille du texte */
+    font-size: 1em; 
     color: var(--color-secondary);
-    position: relative; /* Ajout de position relative */
-    z-index: 1; /* Assure que les cases ne se superposent pas */
+    position: relative; 
+    z-index: 1; 
 }
 
 .cell:hover {
@@ -143,11 +138,11 @@ h1 {
 }
 
 #game-info {
-    margin-top: 1rem;  /* Réduction de la marge */
+    margin-top: 1rem;  
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;  /* Réduction de l'espacement */
+    gap: 0.5rem;  
 }
 
 #restart-button {
@@ -177,7 +172,7 @@ h1 {
     animation: fadeIn 0.5s ease-out;
 }
 
-/* Styles pour les différents nombres */
+
 .cell[data-number="1"] { color: #23c7dd; }
 .cell[data-number="2"] { color: #1ecf4b; }
 .cell[data-number="3"] { color: #fc5a5a; }
@@ -198,7 +193,7 @@ h1 {
     }
 }
 
-/* Ajuster le responsive */
+
 @media screen and (max-width: 800px) {
     .container {
         transform: translate(-50%, -40%) scale(0.9);
@@ -211,9 +206,9 @@ h1 {
         font-size: 0.9em;
     }
 
-    /* Style spécifique pour mobile */
+   
     #game-board::-webkit-scrollbar {
-        width: 14px; /* Encore plus large sur mobile */
+        width: 14px; 
         height: 14px;
     }
 }
